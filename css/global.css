@@ -50,3 +50,6 @@ body {
     font-family: var(--fuente1);
     color: var(--color2);
 }
+main {
+    max-width: 1024px;
+}  
