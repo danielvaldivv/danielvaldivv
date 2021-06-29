@@ -3,11 +3,12 @@ header {
     height: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-block-end: 1px solid rgba(187, 187, 187, 0.2);;
 }
 header .home {
     display: flex;
     align-items: center;
-    margin-inline-start: 20px;
+    margin-inline-start: 15px;
 }
 header  a {
     color: var(--color2);
