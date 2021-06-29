@@ -4,6 +4,7 @@
 /* Global */
 :root {
     --fuente1 : 'Cutive Mono', monospace;
+    --color1 : #0d1117;
 }
 
 
@@ -25,7 +26,7 @@ html {
 }
 body {
     width: 100%;
-    background-color: black;
+    background-color: var(--color1);
     font-family: var(--fuente1);
     color: rgb(173, 184, 194);
 }
@@ -100,7 +101,7 @@ a {
 /* Footer index */
 .index-footer {
     width: 100%;
-    height: 90px;
+    height: 80px;
     border-top: 1px solid rgba(187, 187, 187, 0.2);;
     display: flex;
     align-items: center;
