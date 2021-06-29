@@ -9,7 +9,6 @@
     border: 1px solid var(--fondoHover);
     border-radius: 3px;
     margin: 0 auto;
-    margin-top: 10px;
 }
 .main-section-proyects  a {
     color: var(--color2);

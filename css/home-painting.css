@@ -1,0 +1,58 @@
+.main-section-paintings {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    width: 90%;
+    max-width: 1024px;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid var(--fondoHover);
+    border-radius: 3px;
+    margin: 0px auto;
+    margin-bottom: 25px;
+}
+.main-section-paintings  a {
+    color: var(--color2);
+    border: 1px solid var(--color1);
+    padding: 3px 8px;
+}
+.main-section-paintings  a:hover {
+    background-color: var(--fondoHover);
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px 5px rgba(47, 50, 53, 0.5);
+}
+.main-section-paintings h3 {
+    margin: 10px;
+    text-align: center;
+}
+.grid-section-paintings {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 220px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    margin: 5px;
+}
+.grid-section-paintings .grid-paintings-mini {
+    width: 250px;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: var(--sombraHover);
+    
+}
+ .grid-paintings-mini .painting-mini-picture img {
+    object-fit:cover;
+    width: 230px;
+    height: 80px;
+    border-radius: 3px;
+}
+.grid-paintings-mini .painting-mini-description {
+    width: 220px;
+    margin: 10px;
+    overflow:hidden
+}

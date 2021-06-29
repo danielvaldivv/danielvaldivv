@@ -1,6 +1,8 @@
 .main-grid {
-    display: grid;
-    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap:10px;
 }
 .main-grid-personal {
     display: grid;
