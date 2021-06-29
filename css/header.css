@@ -29,3 +29,8 @@ header nav {
     justify-content: space-evenly;
     align-content: center;
 }
+@media (max-width:400px){
+    header h4 {
+        font-size: 1.6rem;
+    }
+}
