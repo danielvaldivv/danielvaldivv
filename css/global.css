@@ -1,0 +1,45 @@
+:root {
+    --fuente1 : 'Cutive Mono', monospace;
+    --color1 : #0d1117;
+    --color2 : rgb(173, 184, 194);
+    --sombraHover : rgba(102, 129, 131, 0.2);
+    --fondoHover :  rgba(102, 129, 131, 0.5);
+}
+h1 {
+    font-size: 5rem;
+    font-weight:bold;
+}
+h2 {
+    font-size: 3.5rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+h4{
+    font-size: 2rem;
+}
+a {
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.home-body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    width: 100%;
+    background-color: var(--color1);
+    font-family: var(--fuente1);
+    color: var(--color2);
+}
