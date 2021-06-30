@@ -12,7 +12,7 @@ a {
 }
 .grid-section-blog {
     display: grid;
-    grid-template: repeat(8, 180px) / repeat(2, 1fr);
+    grid-template: repeat(9, 180px) / repeat(2, 1fr);
     gap: 8  px 5px;
 }
 
