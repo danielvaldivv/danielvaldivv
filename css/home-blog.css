@@ -12,11 +12,13 @@
 }
 .main-section-blog  a {
     color: var(--color2);
-    border: 1px solid var(--color1);
+    background-color: var(--color6);
+    border: 1px solid rgba(63, 63, 63, 0.2);
     padding: 3px 8px;
 }
 .main-section-blog  a:hover {
-    background-color: var(--fondoHover);
+    color: var(--color3);
+    border: 2px solid var(--color5);
     border-radius: 3px;
     box-shadow: 0px 0px 30px 5px rgba(47, 50, 53, 0.5);
 }

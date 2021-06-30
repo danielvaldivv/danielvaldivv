@@ -2,8 +2,13 @@
     --fuente1 : 'Cutive Mono', monospace;
     --color1 : #0d1117;
     --color2 : rgb(173, 184, 194);
+    --color3 : #56d364;
+    --color4 : #79c0ff;
+    --color5: #238636;
+    --color6: #06140f;
     --sombraHover : rgba(102, 129, 131, 0.2);
     --fondoHover :  rgba(102, 129, 131, 0.5);
+    --sombraBoton : rgba(18, 59, 34, 0.3);
 }
 h1 {
     font-size: 5rem;
@@ -14,9 +19,11 @@ h2 {
 }
 h3 {
     font-size: 2.5rem;
+    color: var(--color4);
 }
 h4{
     font-size: 1.9rem;
+    color: var(--color3);
 }
 h5 {
     font-size: 1.4rem;

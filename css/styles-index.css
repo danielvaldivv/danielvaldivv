@@ -19,6 +19,7 @@ main{
 }
 .index span {
     font-size: 3rem;
+    color: var(--color2);
 }
 .index a{
     font-size: 2rem;
@@ -30,6 +31,7 @@ main{
 }
 .index h1{
     text-align: center;
+    color: var(--color3);
 }
 .index h3 {
     width: 55%;
@@ -51,12 +53,13 @@ main{
 .index .index-description div a {
     margin-block-start: 20px;
     padding: 0px 20px;
-    border: 2px solid rgba(63, 63, 63, 0.2);
+    background-color: var(--color6);
+    border: 2px solid rgba(63, 63, 63, 0.2) ;
     border-radius: 3px;
 }
 .index .index-description div a:hover {
-    color: #fff;
-    border: 2px solid rgba(47, 50, 53, 0.3);
-    box-shadow: 0px 0px 30px 5px rgba(47, 50, 53, 0.3);
-    background-color: var(--sombraHover)
+    color: var(--color3);
+    border: 2px solid var(--color5);
+    box-shadow: 0px 0px 30px 5px var(--sombraBoton);
+    background-color: var(--color6);
 }
