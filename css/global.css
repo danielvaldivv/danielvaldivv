@@ -1,5 +1,6 @@
 :root {
-    --fuente1 : 'Cutive Mono', monospace;
+    --fuente1 : 'Roboto', sans-serif;
+    --fuente2 : 'Cutive Mono', monospace;
     --color1 : #0d1117;
     --color2 : rgb(173, 184, 194);
     --color3 : #56d364;
@@ -19,7 +20,7 @@ h2 {
 }
 h3 {
     font-size: 2.5rem;
-    color: var(--color4);
+    color: var(--color2);
 }
 h4{
     font-size: 1.9rem;
@@ -29,6 +30,7 @@ h5 {
     font-size: 1.4rem;
 }
 p {
+    color: whitesmoke;
     font-size: 1.3rem;
     line-height: 1.7rem;
 }
