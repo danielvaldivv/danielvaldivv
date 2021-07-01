@@ -12,7 +12,8 @@ a {
 }
 .grid-section-blog {
     display: grid;
-    grid-template: repeat(9, 180px) / repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr ;
+    grid-auto-rows: 180px;
     gap: 8  px 5px;
 }
 
