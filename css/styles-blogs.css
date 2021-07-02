@@ -9,6 +9,10 @@
 .main-blogs p a {
     color: var(--color4);
 }
+
+.main-blogs p a:hover {
+    color: var(--color3);
+}
 .picture-blog {
     width: 100vw;
     height: 250px;
@@ -36,6 +40,9 @@
     text-decoration: none;
     color: var(--color4);
     font-size: 1.4rem;
+}
+.blog-section-others ul a:hover {
+    color: var(--color3);
 }
 .blog-section-description {
     margin: 5px;
