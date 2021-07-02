@@ -13,6 +13,9 @@
 .main-blogs p a:hover {
     color: var(--color3);
 }
+.main-blogs p a:active {
+    color: var(--color7)
+}
 .picture-blog {
     width: 100vw;
     height: 250px;
@@ -43,6 +46,9 @@
 }
 .blog-section-others ul a:hover {
     color: var(--color3);
+}
+.blog-section-others ul a:active {
+    color: var(--color7)
 }
 .blog-section-description {
     margin: 5px;
