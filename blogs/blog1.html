@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punto Azul Pálido | Blog | danielvaldivv </title>
+    <title>JavaScript Basic | Blog | danielvaldivv </title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -41,11 +41,51 @@
                 </ul>
             </section>
             <section class="blog-section-description">
-                <h1>Un Punto Azul Pálido Reflexión</h1>
-            <h3>Introducción</h3>
-            <p>Esta descripción viene del libro <a href="https://es.wikipedia.org/wiki/Un_punto_azul_p%C3%A1lido">Un punto azul pálido</a> escrito por el divulgador y cientifico <a href="https://es.wikipedia.org/wiki/Carl_Sagan">Carl Sagan</a>, en el que inicia explicandonos lo incleiblemente diminutos que somos.</p> 
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti fugit doloremque voluptatem, dolorem earum numquam deserunt laboriosam necessitatibus ea quos minima atque vel dolores iure voluptatibus in porro ex laborum.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officia perferendis laudantium nulla dolor molestias tenetur veritatis repudiandae nostrum, magnam molestiae illo? Quisquam accusamus, ipsam earum nisi a quod voluptatibus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, ipsam dolores provident asperiores culpa cupiditate iusto dolorum. Accusamus nulla quae aliquid quasi, accusantium architecto, illo, ullam consequatur fuga consequuntur perspiciatis.</p>
+                <h1>JavaScript Basic</h1>
+                <p>Fecha de publicación: 2/07/21</p>
+
+                <h3>Introducción</h3>
+                <p>Es realmente importante, entender el contexto de lo que vamos a trabajar y para eso es importante entrar en contexto sobre JavaScript: <strong>¿Que es?</strong>, <strong>¿Para que sirve?</strong>, y <strong>¿Por qué existe?</strong>. Esto es para facilitar el entendimiento de el tema a trabajar, ya que facilita la estructuración o encapsulamiento de la información en nuestra memoria.</p> 
+
+                <h3>¿Que es JavaScript?</h3>
+                <p>JavaScript es un lenguaje programación que permite la creación de un objeto sin definir primero su clase, es decir,  se basa en prototipos. Este es un leguaje multiparadigma, de un solo hilo, dinámico, con soporte para    <a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/Object-oriented_JS">programación orientada a objetos</a>, <a href="https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n#Clasificaci%C3%B3n_por_paradigmas">imperativa</a> y <a href="https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n#Clasificaci%C3%B3n_por_paradigmas">declarativa</a>.</p>
+
+                <h3>¿Para que sirve JavaScript?</h3>
+                <p>Al ser este un lenguaje multiparadigma, se puede clasificar en programación funcional, programación basada en prototipos, imperativo e interpretativo.</p>
+                <p>Esto para entender que este lenguaje nos permite trabajarlo como un herramienta muy versatil en diferentes areas de desarrollo como por ejemplo: <a href="https://platzi.com/blog/que-es-frontend-y-backend/">Desarrollo Web Frontend</a> o <a href="https://platzi.com/blog/que-es-frontend-y-backend/">Desarrollo Web Backend</a> y algunos usos externos a la web como aplicaciónes de escritorio (mayoritariamente widgets).</p>
+
+                <h3>¿Por qué existe JavaScript?</h3>
+                <p>Este lenguaje de programación nace de la necesidad de hacer interactiva una página web. Ya que anteriormente las páginas eran solo informativas ya que no permitian ningun tipo de interacion activa por parte del usuario.</p>
+                <h3>Elementos de un lenguaje de programación</h3>
+                <p>En un lenguaje de probramación se necesitan dos componentes principales: datos y tareas.</p>
+                <p>Los datos es la información que se guardara en memoria y esta puede tener varios tipos como: números, strings (texto), boleanos, null o undefined(valores vacios), arrays, objetos, variables.</p>
+                <p>Las tareas son funciones que le asignamos al codigo para que haga algo con dichos datos.</p>
+                <p><strong>¿Cómo se hace esto en JavaScript?</strong></p>
+                <p>Tipo números: <code>28</code>,<code>35</code>, <code>13</code>... </p>
+                <p>Tipo string: <code>"Cualquier tipo de texto"</code>, <code>"4"</code>.</p>
+                <p>Tipo boleanos: <code>true</code> o <code>false</code>.</p>
+                <p>Valores vacios: <code>null</code> tipo null o <code>undefined</code> tipo undefined.</p>
+                <p>Arrays: <code>["texto", 4, "5", 64]</code> tipo objeto.</p>
+                <p>Tipo objetos: <code>{nombre : "tuNombre"}</code></p>
+                <p>Variables: <code>var nombreDeLaVariable = valoreDeLaVariable;</code>.</p>
+
+                <h3>Variables</h3>
+                <p>Declarar una variable: se asigna un espacio en memoria con un nombre determinado.</p>
+                <p><code> &nbsp var edad;</code></p>
+                <p>Inicializar una variable: se asigna un valor en memoria a ese nombre determinado.</p>
+                <p>Números</p>
+                <p><code> &nbsp var nombreDeVariable = 15;</code></p>
+                <p>String</p>
+                <p><code> &nbsp var nombreDeVariable = "Cualquier Texto";</code></p>
+                <p>Arrays</p>
+                <p><code> &nbsp var elementos = ["Computadora, Celular"]</code></p>
+                <p>Objeto</p>
+                <p><code> &nbsp var persona = { <br>&nbsp &nbsp nombre : "nombreCualquiera", <br> &nbsp &nbsp edad : 30, <br> &nbsp } <br>&nbsp persona  </code> </p>
+                <h3>Funciones</h3>
+                <p><strong>Funciones declarativas</strong></p>
+                <p><code>&nbsp function nombreDeLaFuncion(c,d) { <br>&nbsp &nbsp return c + d; <br>&nbsp  } <br>&nbsp nombreDeLaFuncion(); </code></p>
+                <p><strong>Funciones de expresión</strong></p>
+                <p><code>&nbsp var = function nombreDeLaFuncion(c,d) { <br> &nbsp &nbsp  return c + d; <br> &nbsp } <br> &nbsp nombreDeLaFuncion(); </code></p>
             </section>
         </section>
     </main>

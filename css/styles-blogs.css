@@ -1,6 +1,9 @@
 .main-blogs {
     margin: 0 auto;
 }
+.main-blogs h3 {
+    margin-block-start: 10px;
+}
 .main-blogs p{
     font-size: 1.6rem;
     line-height: 2.7rem;
@@ -19,11 +22,10 @@
 .picture-blog {
     width: 100vw;
     height: 250px;
-    background-image: url('../assets/img/tierra.jpg');  
+    background-image: url('../assets/img/javaScript.jpg');  
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover;   
 }
 .main-blog-section { 
     margin: 15px;  

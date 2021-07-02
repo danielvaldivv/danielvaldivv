@@ -3,11 +3,12 @@
     --fuente2 : 'Cutive Mono', monospace;
     --color1 : #0d1117;
     --color2 : rgb(173, 184, 194);
-    --color3 : #3b9931;
+    --color3 : #316a99;
     --color4 : #6290b8;
     --color5: #476569;
     --color6: #060e14;
-    --color7: rgb(145, 60, 60);
+    --color7: rgb(145, 139, 60);
+    --color8: rgb(11, 199, 111);
     --sombraHover : rgba(102, 129, 131, 0.2);
     --fondoHover :  rgba(102, 129, 131, 0.5);
     --sombraBoton : rgba(18, 59, 34, 0.3);
@@ -38,6 +39,9 @@ p {
 }
 a {
     text-decoration: none;
+}
+code, code p {
+    color: var(--color8);
 }
 * {
     box-sizing: border-box;
