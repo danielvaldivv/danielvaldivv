@@ -3,9 +3,9 @@
     --fuente2 : 'Cutive Mono', monospace;
     --color1 : #0d1117;
     --color2 : rgb(173, 184, 194);
-    --color3 : #79b185;
-    --color4 : #79c0ff;
-    --color5: #1c474d;
+    --color3 : #3b9931;
+    --color4 : #6290b8;
+    --color5: #476569;
     --color6: #060e14;
     --sombraHover : rgba(102, 129, 131, 0.2);
     --fondoHover :  rgba(102, 129, 131, 0.5);
@@ -28,6 +28,7 @@ h4{
 }
 h5 {
     font-size: 1.4rem;
+    color: var(--color5);
 }
 p {
     color: whitesmoke;
