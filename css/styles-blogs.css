@@ -38,7 +38,7 @@
     font-size: 1.5rem;
 }
 .blog-section-description {
-    margin: 20px;
+    margin: 5px;
     grid-row: 1 / 2;
 
 }
@@ -47,7 +47,7 @@
         grid-template-columns: 2fr 5fr;
     }
     .blog-section-description {
-        margin: 10px;
+        margin: 15px;
         grid-column: 2 / 3;
     
     }
