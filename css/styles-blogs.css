@@ -7,7 +7,7 @@
 .main-blogs p{
     font-size: 1.6rem;
     line-height: 2.7rem;
-    margin-block-start: 10px;
+    margin-block-start: 15px;
 }
 .main-blogs p a {
     color: var(--color4);

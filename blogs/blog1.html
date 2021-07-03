@@ -60,7 +60,7 @@
                 <p>En un lenguaje de probramación se necesitan dos componentes principales: datos y tareas.</p>
                 <p>Los datos es la información que se guardara en memoria y esta puede tener varios tipos como: números, strings (texto), boleanos, null o undefined(valores vacios), arrays, objetos, variables.</p>
                 <p>Las tareas son funciones que le asignamos al codigo para que haga algo con dichos datos.</p>
-                <p><strong>¿Cómo se hace esto en JavaScript?</strong></p>
+                <p><u>¿Cómo se hace esto en JavaScript?</u></p>
                 <p>Tipo números: <code>28</code>,<code>35</code>, <code>13</code>... </p>
                 <p>Tipo string: <code>"Cualquier tipo de texto"</code>, <code>"4"</code>.</p>
                 <p>Tipo boleanos: <code>true</code> o <code>false</code>.</p>
@@ -73,19 +73,79 @@
                 <p>Declarar una variable: se asigna un espacio en memoria con un nombre determinado.</p>
                 <p><code> &nbsp var edad;</code></p>
                 <p>Inicializar una variable: se asigna un valor en memoria a ese nombre determinado.</p>
-                <p>Números</p>
+                <p><u>Números</u></p>
                 <p><code> &nbsp var nombreDeVariable = 15;</code></p>
-                <p>String</p>
+                <p><u>String</u></p>
                 <p><code> &nbsp var nombreDeVariable = "Cualquier Texto";</code></p>
-                <p>Arrays</p>
+                <p><u>Arrays</u></p>
                 <p><code> &nbsp var elementos = ["Computadora, Celular"]</code></p>
-                <p>Objeto</p>
+                <p><u>Objeto</u></p>
                 <p><code> &nbsp var persona = { <br>&nbsp &nbsp nombre : "nombreCualquiera", <br> &nbsp &nbsp edad : 30, <br> &nbsp } <br>&nbsp persona  </code> </p>
+
                 <h3>Funciones</h3>
-                <p><strong>Funciones declarativas</strong></p>
+                <p><u>Funciones declarativas</u></p>
                 <p><code>&nbsp function nombreDeLaFuncion(c,d) { <br>&nbsp &nbsp return c + d; <br>&nbsp  } <br>&nbsp nombreDeLaFuncion(); </code></p>
-                <p><strong>Funciones de expresión</strong></p>
+                <p><u>Funciones de expresión</u></p>
                 <p><code>&nbsp var = function nombreDeLaFuncion(c,d) { <br> &nbsp &nbsp  return c + d; <br> &nbsp } <br> &nbsp nombreDeLaFuncion(); </code></p>
+
+                <h3>Hoisting</h3>
+                <p>El concepto de Hoisting fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución).
+                </p>
+
+                <p>Una estricta definición de hoisting sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, pero esto no es lo que ocurre en realidad. </p>
+
+                <p>Lo que sucede es que las declaraciones de variables y funciones son asignadas en memoria durante la fase de compilación, pero quedan exactamente en dónde las has escrito en el código.</p>
+                <h3>Ejemplo:</h3>
+                <p>Al correr los siguientes 2 codigos se puede observar que la variable esta definida despues de ser llamada. Pero aun asi JavaScript funciona por su forma de interpretar.</p>
+                <p><strong>Codigo 1</strong></p>
+                <p><code>&nbsp console.log(miNombre); <br>&nbsp var miNombre = "nombreCualquiera";</code></p>
+                <p><strong>Codigo 2</strong></p>
+                <p><code>&nbsp hey(); <br>&nbsp function hey() { <br> &nbsp &nbsp console.log("Hola" + miNombre);</code></p>
+
+                <h3>Coherción</h3>
+                <p><u>Coherción implicita</u></p>
+                <p>La Coherción implicita modifica la naturaleza del valor mediante el uso de un operador.</p>
+                <p>Ejemplo 1</p>
+                <p><code>&nbsp var = a 4 + "7" ; <br>  &nbsp a = "47"</code> </p>
+                <p>La naturaleza o tipo de <code>a</code> será string.</p>
+                <p>Ejemplo 2</p>
+                <p><code>&nbsp var b = 3 * "4"; <br> &nbsp b = 12</code></p>
+                <p>La naturaleza o tipo de <code>b</code> será número.</p>
+                <p><u>Coherción explicita</u></p>
+                <p>La Coherción explicita modifica la naturaleza del valor mediante el uso de una funcion asignada.</p>
+                <p>Ejemplo 1</p>
+                <p><code> &nbsp d = 34; <br> &nbsp var e = String(d); <br>&nbsp e = "34"</code></p>
+                <p>La naturaleza o tipo de <code>d</code> es número, mientras que la de <code>e</code> será string.</p>
+                <p>Ejemplo 2</p>
+                <p><code> &nbsp f = "45"; <br> &nbsp var g = Number(f); <br>&nbsp e = 45</code></p>
+                <p>La naturaleza o tipo de <code>f</code> es string, mientras que la de <code>g</code> será número.</p>
+                <h3>Truthy & Falsy</h3>
+                <p>El valor pasado como primer parámetro se convierte en un valor booleano, si es necesario. Si el valor se omite o es <code>0</code>, <code>-0</code>, <code>null</code>, <code>false</code>, <code>NaN</code>, <code>undefined</code>, o la cadena vacía <code>(" ")</code>, el objeto tiene un valor inicial de false. </p>
+                <p> Todos los demás valores, incluido cualquier objeto, un arreglo vacío <code>([ ])</code> o la cadena <code>"false"</code>, crean un objeto con un valor inicial de true.</p>
+
+                <p><u>Valores false</u></p>
+                <p>
+                    <code> 
+                        &nbsp Boolean (0); &nbsp // return false<br>
+                        &nbsp Boolean (null); &nbsp // return false<br>
+                        &nbsp Boolean (NaN); &nbsp // return false<br>
+                        &nbsp Boolean (undefined); &nbsp // return false <br>
+                        &nbsp Boolean (false); &nbsp // return false<br>
+                        &nbsp Boolean ("") &nbsp // return false;
+                    </code>
+                </p>
+
+                <p><u>Valores true</u></p>
+                <p>
+                    <code> 
+                        &nbsp Boolean (" "); &nbsp // return true<br>
+                        &nbsp Boolean ("a"); &nbsp // return true<br>
+                        &nbsp Boolean (1); &nbsp // return true<br>
+                        &nbsp Boolean ([ ]); &nbsp // return true <br>
+                        &nbsp Boolean ({}); &nbsp // return true<br>
+                        &nbsp Boolean (true) &nbsp // return true;
+                    </code>
+                </p>
             </section>
         </section>
     </main>
