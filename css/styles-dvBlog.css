@@ -37,11 +37,19 @@ a {
 .blog-card-text {
     height: 62%;
     display: flex;
+    margin: 8px;
+    flex-direction: column;
     overflow : hidden;
 }
 .section-blog-card h3, .section-blog-card p {
     margin:8px;
     width: 98%;
+}
+@media (min-width:380px) {
+    .blog-card-text p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 }
 @media (min-width:600px){
     .section-blog-card {
@@ -54,5 +62,8 @@ a {
     .blog-card-two {
         grid-column: 1 / 2;
         grid-row:  3 / 5;
+    }
+    .blog-card-text{
+        flex-direction: row;
     }
 }
