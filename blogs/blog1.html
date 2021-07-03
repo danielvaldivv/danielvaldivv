@@ -277,13 +277,85 @@
                         &nbsp &nbsp    break; <br>
                         &nbsp &nbsp case 'Perro': <br>
                         &nbsp &nbsp case 'Vaca': <br>
-                        &nbsp &nbsp default:
+                        &nbsp &nbsp default: <br>
                         &nbsp &nbsp &nbsp console.log('Este animal no es volador.');<br>
                         &nbsp }
                    </code>
                 </p>
                 <p>
                     <strong>Nota:</strong> en caso de que no se ponga un <code>break</code>; en el condicional <code>switch</code> se ejecutaran todas las declaraciones <code>{ }</code> de los diferentes <code>case</code> hasta encontrar un <code>break</code> o hasta que evalue todas las declaraciones <code>{ }</code> de los <code>case</code> existentes hasta el final. <br>
+                </p>
+                <h3>Arrays</h3>
+                <p>El objeto Array de JavaScript es un objeto global que es usado en la construcción de arrays, que son objetos tipo lista de alto nivel.</p>
+                <p>Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación. Tanto la longitud como el tipo de los elementos de un array son variables.</p>
+                <p>
+                    <u><strong>Creación de un array </strong></u><br>
+                    <code>
+                        &nbsp var frutas = ["manzana", "plátano", "cereza", "fresa"];<br>
+                        &nbsp console.log(frutas.length) <br>
+                    </code>
+                </p>
+                <p>Es importante mencionar que la posición de los arrays se cuenta a partir de 0. También debe tenerse en cuenta que para saber la longitud de un array debe utilizarse <code>nombreDelArray.length</code>.</p> <br>
+                <p>
+                    <u><strong>Acceso a un array</strong></u> <br>
+                    Ejemplo 1: <br>
+                    <code>
+                        &nbsp let segundaFruta = frutas[1] <br>
+                        &nbsp segundaFruta = plátano
+                    </code><br>
+                    Ejemplo 2: <br>
+                    <code>
+                        &nbsp let ultimaFruta = frutas[frutas.length - 1] <br>
+                        &nbsp ultimaFruta = fresa
+                    </code>                    
+                </p>
+                <p>
+                    <u><strong>Añadir un elemento al final del array</strong></u> <br>
+                    <code>
+                        &nbsp var frutas = ["manzana", "plátano", "cereza", "fresa"];<br>
+                        &nbsp var masFutas = frutas.push("mora") <br>
+                        &nbsp frutas = ["manzana", "plátano", "cereza", "fresa", "mora"] <br>
+                        &nbsp masFrutas = 5  &nbsp // tamaño del array en ese momento <br>
+                    </code>
+                    Es importante reconocer que al utilizar <code>nombreDelArray.push(" ")</code>. Esto modi el array al que se le aplicó el <code>nombreDelArray.push(" ")</code>.
+                </p>
+                <p>
+                    <u><strong>Elimina el último elemento del array</strong></u> <br>
+                    <code>
+                        &nbsp frutas = ["manzana", "plátano", "cereza", "fresa", "mora"] <br>   
+                        &nbsp var menosFutas = frutas.pop() <br>
+                        &nbsp frutas = ["manzana", "plátano", "cereza", "fresa"] <br>
+                        &nbsp menosFrutas = "mora"  <br>
+                    </code>
+                    Cabe mencionar que el nombre de la variable asignado <code>menosFrutas</code>, esta variable guarda el elemento del array eliminado.
+                </p>
+                <p>
+                    <u><strong>Añade un elemento al inicio del Array</strong></u> <br>
+                    <code>
+                        &nbsp frutas = ["manzana", "plátano", "cereza", "fresa"] <br>   
+                        &nbsp var inicioFutas = frutas.unshift("papaya") <br>
+                        &nbsp frutas = ["papaya","manzana", "plátano", "cereza", "fresa"] <br>
+                        &nbsp inicioFrutas = 5  <br>
+                    </code>
+                    Cabe mencionar que el nombre de la variable asignado <code>menosFrutas</code>, esta variable guarda el elemento del array eliminado.
+                </p>
+                <p>
+                    <u><strong>Elimina el primer elemento del array</strong></u> <br>
+                    <code>
+                        &nbsp frutas = ["papaya","manzana", "plátano", "cereza", "fresa"] <br>  
+                        &nbsp var borrarFutas = frutas.shift() <br>
+                        &nbsp frutas = ["manzana", "plátano", "cereza", "fresa"] <br>
+                        &nbsp borrarFrutas = "papaya"  <br>
+                    </code>
+                    Cabe mencionar que el nombre de la variable asignado <code>borrarFrutas</code>, esta variable guarda el elemento del array eliminado.
+                </p>
+                <p>
+                    <u><strong>posición del valor en un array</strong></u> <br>
+                    <code>
+                        &nbsp frutas = ["manzana", "plátano", "cereza", "fresa"] <br> 
+                        &nbsp var posicionFutas = frutas.indexOf("cereza") <br>
+                        &nbsp posicionFutas = [2]   <br>
+                    </code>
                 </p>
             </section>
         </section>
