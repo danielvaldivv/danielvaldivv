@@ -198,7 +198,7 @@
                 </p>
                 <p>
                     <strong>Comparación de valor y tipo</strong> 
-                    <code>
+                    <code>&nbsp ===  <br>
                         &nbsp 4 === "4" &nbsp // return false <br>
                         &nbsp 5 === 5 &nbsp // return true <br>
                         &nbsp "6" === "6" &nbsp // return true
@@ -209,6 +209,79 @@
                     Si a es T y b es T entonces es True, si alguna es falsa entonces el condicional es falso <code>&nbsp a && b </code>. <br>
                     Si a es T o b es T entonces la condicion es T. <code>&nbsp a || b</code>
                     Diferente <code>&nbsp != </code>. <br> 
+                </p>
+                <h3>Condicionales</h3>
+                <p>
+                    <u><strong>if, else if, else</strong></u><br>
+                    Los condicionales son un punto de infleccion del codigo en el cual tiene que entrar a decidir, si cumple una condición <code>(condicionUno)</code>, entonces ejecute <code>{ejecutarOrdenUno}</code>. <br>
+                    <code>
+                        &nbsp if (condicionUno) { <br>
+                            &nbsp  &nbsp ejecutarOrdenUno <br>
+                        &nbsp }
+                    </code> <br>
+                    Si no se cumple la condicion <code>( )</code> anterior pero se cumple la siguente condición <code>(condicionDos)</code>, entonces ejecute <code>{ejecutarOrdenDos}</code>. Nota es posible utilizar tantos <code>else if</code> como sea necesario.<br>
+                    <code>
+                        &nbsp else  if (condicionDos) { <br>
+                            &nbsp &nbsp ejecutarOrdenDos; <br>
+                        &nbsp }
+                    </code> <br>
+                    Si no se cumple ninguna de las condiciones <code>( )</code> anteriores, entonces ejecute <code>{ejecutarOrdenTres}</code>. <br>
+                    <code>
+                        &nbsp else { <br>
+                            &nbsp &nbsp ejecutarOrdenTres;<br>
+                        &nbsp} <br>
+                    </code><br>
+                    <strong>Operador Ternario</strong> <br>
+                    El operador condicional (ternario) es el único operador en JavaScript que tiene tres operandos. Este operador se usa con frecuencia como atajo para la instrucción <strong>if</strong>. <br>
+                    <code>
+                        &nbsp condition ? true : false;
+                    </code> <br>
+                    Se evaluará la condición <code>condition</code> por medio de <code>true</code> o <code>false</code> y como respuestra entregará: <code>true</code> o <code>false</code>.<br>
+                    Ejemplo <br>
+                    <code>
+                        &nbsp var numA = 1; <br>
+                    &nbsp var numB = 2; <br>
+                    &nbsp numA == numB ? "numA igual numB":"numA diferente numB"
+                    </code> <br>
+                    El resultado a este codigo será: <code>"numA diferente numB</code>
+                </p>
+                <p>
+                    <strong><u>Switch</u></strong><br>
+                    La declaración <code>switch</code> evalúa una expresión <code>( )</code>, comparando el valor de esa expresión con una instancia <code>case</code>, y ejecuta declaraciones <code>{ }</code> asociadas a ese <code>case</code>, o ejecurara un <code>default</code> en caso de que ningun <code>case</code> se ejecute. <br>
+                    <code>
+                        &nbsp var numero = 33;<br>
+                        &nbsp switch (numero){<br>
+                            &nbsp &nbsp case 1: <br>
+                             &nbsp &nbsp &nbsp console.log("Soy uno!"); <br>
+                             &nbsp &nbsp break;<br>
+                             &nbsp &nbspcaso 33: <br>
+                             &nbsp &nbsp &nbsp console.log("Soy un 33!"); <br>
+                             &nbsp &nbsp break;<br>
+                             &nbsp &nbsp caso 50: <br>
+                             &nbsp &nbsp &nbsp console.log("Si, soy un 50"); <br>
+                             &nbsp &nbsp break; <br>
+                             &nbsp &nbsp default: <br>
+                             &nbsp &nbsp &nbsp console.log("No soy nada");<br>
+                        &nbsp } <br>
+                    </code>
+                    <strong>Nota:</strong> en caso de que no se ponga un <code>break;</code> se ejecutaran todas las declaraciones <code>{ }</code> de los diferentes <code>case</code> hasta encontrar un <code>break</code> o hasta que evalue todas las declaraciones <code>{ }</code> de los <code>case</code> existentes hasta el final. <br>
+                    <strong>Metodos de Multiple Criterio</strong><br>
+                    En este caso diferentes <code>case</code> evaluaran la misma declaración <code>{ }</code> es decir, compartiran la misma declaración <code>{ }</code>. <br>
+                   <code>
+                    &nbsp var Animal = 'Loro';<br>
+                    &nbsp switch (Animal) { <br>
+                        &nbsp &nbsp case 'Tucan': <br>
+                        &nbsp &nbsp case 'Guacamaya': <br>
+                        &nbsp &nbsp case 'Aguila': <br>
+                        &nbsp &nbsp case 'Golondrina': <br>
+                        &nbsp &nbsp &nbsp console.log('Este animal  es volador.'); <br>
+                        &nbsp &nbsp    break; <br>
+                        &nbsp &nbsp case 'Perro': <br>
+                        &nbsp &nbsp case 'Vaca': <br>
+                        &nbsp &nbsp default:
+                        &nbsp &nbsp &nbsp console.log('Este animal no es volador.');<br>
+                        &nbsp }
+                   </code>
                 </p>
             </section>
         </section>
