@@ -100,7 +100,7 @@
                 <p><strong>Codigo 1</strong></p>
                 <p><code>&nbsp console.log(miNombre); <br>&nbsp var miNombre = "nombreCualquiera";</code></p>
                 <p><strong>Codigo 2</strong></p>
-                <p><code>&nbsp hey(); <br>&nbsp function hey() { <br> &nbsp &nbsp console.log("Hola" + miNombre);</code></p>
+                <p><code>&nbsp hey(); <br>&nbsp function hey() { <br> &nbsp &nbsp console.log("Hola" + miNombre); <br>&nbsp }</code></p>
 
                 <h3>Coherción</h3>
                 <p><u>Coherción implicita</u></p>
@@ -119,6 +119,8 @@
                 <p>Ejemplo 2</p>
                 <p><code> &nbsp f = "45"; <br> &nbsp var g = Number(f); <br>&nbsp e = 45</code></p>
                 <p>La naturaleza o tipo de <code>f</code> es string, mientras que la de <code>g</code> será número.</p>
+
+
                 <h3>Truthy & Falsy</h3>
                 <p>El valor pasado como primer parámetro se convierte en un valor booleano, si es necesario. Si el valor se omite o es <code>0</code>, <code>-0</code>, <code>null</code>, <code>false</code>, <code>NaN</code>, <code>undefined</code>, o la cadena vacía <code>(" ")</code>, el objeto tiene un valor inicial de false. </p>
                 <p> Todos los demás valores, incluido cualquier objeto, un arreglo vacío <code>([ ])</code> o la cadena <code>"false"</code>, crean un objeto con un valor inicial de true.</p>
@@ -145,6 +147,68 @@
                         &nbsp Boolean ({}); &nbsp // return true<br>
                         &nbsp Boolean (true) &nbsp // return true;
                     </code>
+                </p>
+                <h3>Operadores</h3>
+                <p>Los operadores son aquellos metodos que permiter realizar modificaciones a los valores asignados en un principio.</p>
+
+                <p><u><strong>Aritméticos</strong></u></p>
+                
+                <p><code>
+                    &nbsp 3 + 2 &nbsp //return 5 <br>
+                    &nbsp 25 - 10 &nbsp // return 15 <br>
+                    &nbsp 10 * 3&nbsp // return 30 <br>
+                    &nbsp 15 / 3 &nbsp // return 5 <br>
+                    &nbsp "Nombre " + "Apellido" &nbsp // return Nombre Apellido
+                </code></p>
+                <p>
+                    <strong>Adición</strong> <br>
+                    <code>
+                        &nbsp var edad = 40 <br>
+                        &nbsp edad ++ &nbsp // es la &nbsp variable + 1 <br>
+                        &nbsp edad += 2 &nbsp // es variable + 2
+                    </code>
+                </p>
+                
+                <p>
+                    <strong>Negación</strong> <code>&nbsp !</code>&nbsp usandolo antes de.   <br>
+                    <code>
+                        &nbsp !false &nbsp // return true <br>
+                        &nbsp !true &nbsp // return false
+                    </code><br>
+                </p>
+
+                <p><u><strong>Asignación</strong></u></p>
+                
+                <p>
+                    <strong>Asignación de variable</strong> <code>&nbsp = &nbsp</code>  <br>
+                    &nbsp <code>a = 2;</code><br>
+                    &nbsp <code> b = "2";</code><br>
+                </p>
+                <p><u><strong>Comparativos</strong></u></p>
+                <p>
+                    <strong>Comparación de valor </strong>
+                    <code>
+                        &nbsp ==<br>
+                        &nbsp 3 == "3" &nbsp //return true <br>
+                        &nbsp 5 < 3  &nbsp // return false <br>
+                        &nbsp 5 > 3 &nbsp // return true <br>
+                        &nbsp 5 <= 6 &nbsp // return true <br>
+                        &nbsp 5 >= 6 &nbsp // return false <br>
+                    </code>
+                </p>
+                <p>
+                    <strong>Comparación de valor y tipo</strong> 
+                    <code>
+                        &nbsp 4 === "4" &nbsp // return false <br>
+                        &nbsp 5 === 5 &nbsp // return true <br>
+                        &nbsp "6" === "6" &nbsp // return true
+                    </code>
+                </p>
+                <p>
+                    <strong>Comparación Operadores Lógicos</strong> <br>
+                    Si a es T y b es T entonces es True, si alguna es falsa entonces el condicional es falso <code>&nbsp a && b </code>. <br>
+                    Si a es T o b es T entonces la condicion es T. <code>&nbsp a || b</code>
+                    Diferente <code>&nbsp != </code>. <br> 
                 </p>
             </section>
         </section>
