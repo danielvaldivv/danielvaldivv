@@ -350,12 +350,128 @@
                     Cabe mencionar que el nombre de la variable asignado <code>borrarFrutas</code>, esta variable guarda el elemento del array eliminado.
                 </p>
                 <p>
-                    <u><strong>posición del valor en un array</strong></u> <br>
+                    <u><strong>Posición del valor en un array</strong></u> <br>
                     <code>
                         &nbsp frutas = ["manzana", "plátano", "cereza", "fresa"] <br> 
                         &nbsp var posicionFutas = frutas.indexOf("cereza") <br>
                         &nbsp posicionFutas = [2]   <br>
                     </code>
+                </p>
+                <h3>Objetos</h3>
+                <p>
+                    <strong>¿Qué son los objetos?</strong><br>
+                    Un objeto es una colección de datos relacionados y/o funcionalidad (que generalmente consta de algunas variables y funciones, que se denominan propiedades y métodos cuando están dentro de objetos).<br>
+
+                    <strong><u>Creación de un Objeto</u><br></strong>
+                    <code>
+                        &nbsp var persona = { <br>
+                        &nbsp &nbsp nombre: ['Bob', 'Smith'], <br>
+                        &nbsp &nbsp edad: 32, <br>
+                        &nbsp &nbsp genero: 'masculino', <br>
+                        &nbsp &nbsp intereses: ['música', 'esquí'] <br>
+                         &nbsp }; <br>
+                        </code>
+                </p>
+                <p>
+                    <strong><u>Funciones dentro de un Objeto</u></strong> <br>
+                    Las funciones dentro de un objeto se definen con el nombre de la funcion <code>nombreDeLaFuncion</code> seguido de <code>: function() {</code> , aqui dentro se ingresan las variables, condiciones o ejecutables que se busque con la función. Es muy importante no olvidar cerrar la función<code>}</code>  . <br>
+                    <code>
+                        &nbsp var persona = { <br>
+                        &nbsp &nbsp nombre: ['Bob', 'Smith'], <br>
+                        &nbsp &nbsp edad: 32, <br>
+                        &nbsp &nbsp genero: 'masculino', <br>
+                        &nbsp &nbsp intereses: ['música', 'esquí'] <br>
+                        &nbsp &nbsp saludo : function () { <br>
+                            &nbsp &nbsp &nbsp alert('Hola, soy' + this.nombre[0] + '.'); <br>
+                            &nbsp &nbsp } <br>
+                        &nbsp }; <br>
+                    </code>
+                    <strong>Nota: es reelevante observar que la guncion a utilizar <code>this.nombre</code> el <code>this.</code> hace referencia a el objeto en el que se encuentra, <code>nombre</code> se refiere al elemento dentro del mismo objeto y <code>[0]</code> hace alución a la posición 0 del elemento <code>nombre</code> dentro del objeto <code>persona</code>.</strong> <br>
+                </p>
+                <p>
+                    <strong> <u>Llamado de algún valor dentro del objeto</u></strong>
+                    <code>
+                        &nbsp persona.nombre &nbsp // Mostrará los valores que tengan pertenezcan a nombre <br>
+                        &nbsp persona.nombre[0] &nbsp // Mostrará el valor asignado en la posición 0 <br>
+                        &nbsp persona.edad &nbsp //Mostrará el valor que pertenezca a edad dentro del objeto <br>
+                        &nbsp persona.intereses[1] &nbsp // Mostrará el valor que pertenezca a interes y se encuetre en la posición 1 <br>
+                        &nbsp persona.saludo() &nbsp // ejecutara la función saludo, pentro del objeto persona <br>
+                    </code>
+                </p>
+                <h3>Bucles o loops</h3>
+                <p>Los bucles ofrecen una forma rápida y sencilla de hacer algo repetidamente. Hay muchos diferentes tipos de bucles, pero esencialmente, todos hacen lo mismo: repiten una acción varias veces.</p>
+                <p>Los diversos mecanismos de bucle ofrecen diferentes formas de determinar los puntos de inicio y terminación del bucle. Hay varias situaciones que son fácilmente atendidas por un tipo de bucle que por otros.</p>
+                <p>
+                    <u><strong>For</strong></u> <br>
+                    Un ciclo for ejecuta una acción si y se repite mientras sea <code>true</code> una condición hasta que una condición especificada se evalúe como <code>false</code>. <br>
+                    <code>
+                        &nbsp for ( exprIn; exprCond; exprAct) { <br>
+                            &nbsp &nbsp evaluador <br>
+                        &nbsp } <br>
+                    </code>
+                    <strong>NOTA:En los bucles for, suele parecerse a algo como: <code>exprIn</code> --><code> i = 0</code>, <code> exprCond </code> --> <code> i < numeroDeterminado </code> y <code> exprAct </code> --> <code> i++ </code>.</strong>
+                </p>
+                <p>
+                    <u><strong>While</strong></u>
+                    Una declaración while ejecuta sus instrucciones siempre que una condición especificada se evalúe como true. <br>
+                    <code>
+                        &nbsp while (exprCond){ <br>
+                            &nbsp &nbsp evaluador <br>
+                        &nbsp} <br>
+                    </code>
+                    Un ejemplo de este caso seria: <br>
+                    <code>
+                        &nbsp let n = 0; <br>
+                        &nbsp let x = 0; <br>
+                        &nbsp while (n < 3) { <br>
+                            &nbsp &nbsp n++; <br>
+                            &nbsp &nbsp x += n; <br>                            
+                        &nbsp } <br>
+                    </code>
+                    En este caso el bucle se ejecutará 3 veces ya que el final de: <br>
+                    Primera ejecución: <code>n = 1</code> y <code>x = 1</code> <br>
+                    Segunda ejecución: <code>n = 2</code> y <code>x = 3</code> <br>
+                    Tercera ejecución: <code>n = 3</code> y <code>x = 6</code> <br>
+                    Para este punto n = 3, por lo tanto no se cumple la condición <code> n < 3 </code>, por lo tanto no realizara la ejecución.
+                </p>
+                <p>
+                    <u><strong>For..in, For..of</strong></u> <br>
+                    La declaración for...in  y for...of crean un bucle que se repite sobre objetos iterables. <br>
+                    La diferencia entre un bucle for...in y un bucle for...of. <br> 
+                    Mientras que for...in itera sobre los nombres de propiedad, for...of itera sobre los valores de propiedad: <br>
+                    <code>
+                        &nbsp const array = [3, 5, 7]; <br>
+                        &nbsp array.foo = 'hola'; <br>
+                        &nbsp for (let i in array) { <br>
+                            &nbsp &nbsp console.log(i); // retornará "0", "1", "2", "foo"
+                            &nbsp } <br>
+                            &nbsp for (let i of array) { <br>
+                                &nbsp &nbsp console.log(i); // entregará 3, 5, 7 <br>
+                            &nbsp } <br>
+                    </code>
+                    Debe resaltarse que al llamar el array <code>array</code> este entregará: <code>[3, 5, 7, foo:"Hola"]</code> <br>
+                    Es por esto que de la posición 3 del array <code>array</code> no entrega nada, es porque en la posicón 3 de array no se encuentra un valor, se encuenta un objeto. <br>
+                    Por lo que es interesante mencionar que el se pueden tener objetos dentro de un array. 
+                </p>
+                <h3>Función constructora</h3>
+                <p>La función constructora es la versión de JavaScript de una clase. Esta tiene todas las características que se espera de una función, aunque no devuelve nada o crea explícitamente un objeto, es decir, sólo define propiedades y métodos. <br>
+                Se observa que la palabra clave this se usa aquí también — es básicamente decir que cuando se crea una de estas instancias de objeto, las propiedades <code>marca</code>, <code>modelo</code> y <code>annio</code> del objeto será igual al valor del nombre pasado a la llamada del constructor, y el método greeting() usará también el valor del nombre pasado a la llamada del constructor. <br>
+                <code>
+                    &nbsp function Auto(marca, modelo, annio){ <br>
+                        &nbsp &nbsp this.marca = marca; <br>
+                        &nbsp &nbsp this.modelo = modelo; <br>
+                        &nbsp &nbsp this.annio = annio; <br>
+                        &nbsp } <br>
+                </code>
+                </p>
+                <p>
+                    <u><Strong>Uso de la función constructora</Strong></u> <br>
+                    <code>
+                        &nbsp var autoNuevo = new auto("Tesla", "Model 3", "2020"); <br>
+                        &nbsp var autoNuevo2 = new auto("Tesla", "Model X", 2018); <br>
+                        &nbsp var AutoNuevo3 = new auto("Toyota", "Corolla", 2020); <br>
+                    </code>
+                    En este caso <code>autoNuevo</code>, <code>autoNuevo2</code> y  <code>AutoNuevo3</code> son objetos independientes que utilizaron la estructura de la misma función constructora.
                 </p>
             </section>
         </section>
