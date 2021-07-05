@@ -1,0 +1,17 @@
+
+.picture-blog-one {
+    width: 100vw;
+    height: 250px;
+    background-image: url('../assets/img/javaScript.jpg');  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+.picture-blog-two {
+    width: 100vw;
+    height: 250px;
+    background-image: url('../assets/img/javascriptRecorridos.jpg');  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}

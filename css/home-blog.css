@@ -11,7 +11,10 @@
     margin: 0 auto;
     box-shadow: 1px 1px 8px 8px rgba(0, 0, 0,0.4);
 }
-.main-section-blog a {
+::-webkit-scrollbar {
+    display: none; /*ELIMINA LOS SCROLLBAR VISIBLES PERO PERMITE LA FUNCIONALIDAD DEL SCROLL*/
+}
+.main-section-blog .section-blog-link {
     border-radius: 3px;
     background-image: url('../assets/img/blog.jpg');
     background-position:center;
@@ -38,17 +41,55 @@
     height: 220px;
     display: flex;
     overflow-x: scroll;
+    gap:15px;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
 }
 .main-grid-blog .grid-blog-mini {
-    width: 280px;
     height: 180px;
-    margin: 10px;
+    margin-top: 20px;
+    padding: 5px;
     border-radius: 3px;
     background-color: var(--sombraHover);
     scroll-snap-align: center;
+    
+}
+.main-grid-blog .grid-blog-mini h2 {
+    width: 240px;
+    text-align: center;
+    color: white;
 }
 .main-grid-blog .grid-blog-mini p {
-    width: 280px;
+    width: 220px;
+    text-align: justify;
+    color: white;
+    margin: 5px;
+}
+.grid-blog-mini a {
+    width: 240px;
+    margin: 10px;
+    height: 100%;
+    border: 1px solid var(--color1);
+}
+.grid-blog-mini a:hover {
+    border: 1px solid var(--color2);
+}
+.blog-mini-one {
+    min-width: 240px;
+    background-image: url('../assets/img/javaScript.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.blog-mini-two {
+    min-width: 240px;
+    background-image: url('../assets/img/javascriptRecorridos.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 5px;
 }

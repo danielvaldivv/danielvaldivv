@@ -1,8 +1,21 @@
+@import url('./picture-header.css');
 .main-blogs {
     margin: 0 auto;
 }
+code {
+    background-color: var(--color6);
+    padding: 3px;
+}
+.code-background {
+    margin: 8px;
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    background-color: var(--color6);
+    border: 1px solid var(--color5);
+    border-radius: 3px;
+}
 .main-blogs h3 {
-    margin-block-start: 10px;
+    margin-block-start: 50px;
 }
 .main-blogs p{
     font-size: 1.6rem;
@@ -19,14 +32,7 @@
 .main-blogs p a:active {
     color: var(--color7)
 }
-.picture-blog {
-    width: 100vw;
-    height: 250px;
-    background-image: url('../assets/img/javaScript.jpg');  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;   
-}
+
 .main-blog-section { 
     margin: 15px;  
     display: grid;
@@ -37,6 +43,7 @@
     border-radius: 3px; 
     list-style-type:square;
     padding: 20px 30px;
+    margin-block-end: 10px;
 }   
 .blog-section-others ul li {
     margin-block-start: 10px ;
