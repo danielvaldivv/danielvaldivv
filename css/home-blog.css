@@ -93,3 +93,13 @@
     margin: 0 auto;
     padding: 5px;
 }
+
+.blog-mini-three {
+    min-width: 240px;
+    background-image: url('../assets/img/javascriptPractico.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 5px;
+}
