@@ -27,6 +27,19 @@
         <section class="main-blog-section">
             <section class="blog-section-others">
                 <ul>
+                    <h3>Index</h3>
+                    <li><a href="#index-scope">Scope</a></li>
+                    <li class="tab"><a href="#index-scope-global">Scope Global</a></li>
+                    <li class="tab"><a href="#index-scope-local">Scope local</a></li>
+                    <li class="tabtab"><a href="#index-scope-funcion">Function Local Scope</a></li>
+                    <li class="tabtab"><a href="#index-scope-block">Block Local Scope</a></li>
+                    <li><a href="#index-closures">Closures</a></li>
+                    <li class="tab"><a href="#index-closures-lexical">Closures Lexical</a></li>
+                    <li class="tab"><a href="#index-closures-private">Closures Pivate</a></li>
+                    <li class="tab"><a href="#index-closures-loops">Closures Loops</a></li>
+                    <li><a href="#index-hoisting">Hoisting</a></li>
+                </ul>
+                <ul>
                     <h3>Aquí tienes los últimos 10 blogs</h3>
                     <li><a href="./javascriptBasicBg1.html">JavaScript Basic</a></li>
                     <li><a href="/blogs/javascriptScopeClosure&ScopeBg3.html">Scope, Closures & Hoisting JavaScript</a></li>
@@ -52,7 +65,7 @@
 
                 <p>Los Scope también se pueden superponer en una jerarquía, de modo que los Scope secundarios tengan acceso a los ámbitos primarios, pero no al revés. </p>
                 
-                <p><u><strong>Global Scope:</strong></u> Las variables NO están dentro de funciones o bloques, por lo tanto se puede acceder a ellas de manera global.</p>
+                <p id="index-scope-global"><u><strong>Global Scope:</strong></u> Las variables NO están dentro de funciones o bloques, por lo tanto se puede acceder a ellas de manera global.</p>
 
                 <div class="code-background">
                     <code>
@@ -81,7 +94,7 @@
                     <li><p>En el uso de variables la unica manera de reasignar variables es mediante el uso de var puesto que  let y const no lo permitirá.</p></li>
                 </ul>
 
-                <p><u><strong>Local Scope:</strong></u></p>
+                <p id="index-scope-local" ><u><strong>Local Scope:</strong></u></p>
                 <p>Las variables SI estan dentro de bloques de codigo o funciones, por lo cual se puede acceder a ellas SOLO en el bloque de codigo o la funcion.</p>
                 <p>Pues fuera de la función o el bloque de codigo, esta variable no existirá.</p>
 
@@ -115,7 +128,7 @@
                 </div>
                 <p><strong><u>NOTA:</u></strong> Observese que al correr el codigo anterior al utilizar la función <code>functionScope ();</code> se logra acceder al scope local <code>scope = " I'm just local"</code> y al utilizar <code>console.log (scope);</code> solo se puede acceder a <code>scope = "I'm just global" </code>. </p>
 
-                <p><u><strong>FUNCTION LOCAL SCOPE</strong></u></p>
+                <p id="index-scope-funcion"><u><strong>FUNCTION LOCAL SCOPE</strong></u></p>
                 <p><strong>Ejemplo 1</strong></p>
                 <div class="code-background">
                     <code>
@@ -159,7 +172,7 @@
                 </div>
                 <p><strong><u>NOTA:</u></strong> el primer valor asignado <code>x = 1</code> sera borrado y se reescribirá <code>x = 2</code> al igual que <code>y</code> por lo que al final se obtendran <code>x = 2</code> y también <code>y = 2</code>.</p>
 
-                <p><strong><u>BLOCK LOCAL SCOPE</u></strong></p>
+                <p id="index-scope-block"><strong><u>BLOCK LOCAL SCOPE</u></strong></p>
                 <p><strong>Ejemplo 1</strong></p>
 
                 <div class="code-background">
@@ -249,7 +262,7 @@
             </div>
 
 
-            <p><u><strong>Lexical</strong></u></p>
+            <p id="index-closures-lexical"><u><strong>Lexical</strong></u></p>
 
             <div class="code-background">
                 <code>
@@ -274,7 +287,7 @@
             </div>
             <p><u><strong>NOTA:</strong></u> Cabe resaltar que la sintaxis <code>x++</code> realiza un incremento pero muestra el valor anterior al incremento, y la sintaxis <code>++x</code> realiza el incremento pero muestra el valor ya incrementado.</p>
 
-            <p><u><strong>Private</strong></u></p>
+            <p id="index-closures-private"><u><strong>Private</strong></u></p>
             <div class="code-background">
                 <code>
                     &nbsp const person = () => { <br>
@@ -296,7 +309,7 @@
                 </code>
             </div>
 
-            <p><u><strong>Loops</strong></u></p>
+            <p id="index-closures-loops"><u><strong>Loops</strong></u></p>
             <div class="code-background">
                 <code>
                     &nbsp const anotherFunction = () => { <br>

@@ -6,6 +6,12 @@ code {
     background-color: var(--color6);
     padding: 3px;
 }
+.tab {
+    margin-left: 30px;
+}
+.tabtab {
+    margin-left: 50px;
+}
 .code-background {
     margin: 8px;
     font-size: 1.6rem;
