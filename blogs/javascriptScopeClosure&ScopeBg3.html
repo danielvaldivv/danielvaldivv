@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic | Blog | danielvaldivv </title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="/danielvaldivv/css/styles-blogs.css">
+</head>
+<body>  
+    <header>
+        <section class="home"><a href="../dvBlog.html"><h4>danielvaldivv</h4></a></section>
+        
+        <nav>
+            <a href="../dvBlog.html"><h4>dvBlog</h4></a>
+            <a href=""><h4>About me</h4></a>
+        </nav>
+    </header>
+    <picture>
+        <div class="picture-blog-two">
+        </div>
+    </picture>
+    <main class="main-blogs">
+        <section class="main-blog-section">
+            <section class="blog-section-others">
+                <ul>
+                    <h3>Aquí tienes los últimos 10 blogs</h3>
+                    <li><a href="./javascriptBasicBg1.html">JavaScript Basic</a></li>
+                    <li><a href="/blogs/javascriptScopeClosure&ScopeBg3.html">Scope, Closures & Hoisting JavaScript</a></li>
+                    <li><a href="">Titulo del Blog numero 4, enlace directo</a></li>
+                    <li><a href="">Titulo del Blog numero 5, enlace directo</a></li>
+                    <li><a href="">Titulo del Blog numero 6, enlace directo</a></li>
+                    <li><a href="">Titulo del Blog numero 7, enlace directo</a></li>
+                    <li><a href="">Titulo del Blog numero 8, enlace directo</a></li>
+                    <li><a href="">Titulo del Blog numero 9, enlace directo</a></li>
+                    <li><a href="">Titulo del Blog numero 10, enlace directo</a></li>
+                    <li><a href="">Titulo del Blog numero 11, enlace directo</a></li>
+                </ul>
+            </section>
+            <section class="blog-section-description">
+                <h1>Scope, Closures & Hoisting en JavaScript</h1>
+                <p>Fecha de publicación: 6/07/21</p>
+
+                <h3 id="index-scope">Scope</h3>
+                <p><strong><u>¿Qué es Scope y cómo funciona?</u></strong></p>
+                <p>El contexto actual de ejecución. El contexto en el que los valores y las expresiones son "visibles" o pueden ser referenciados.</p>
+                
+                <p>Si una variable u otra expresión no está "en el Scope- alcance actual", entonces no está disponible para su uso.</p> 
+
+                <p>Los Scope también se pueden superponer en una jerarquía, de modo que los Scope secundarios tengan acceso a los ámbitos primarios, pero no al revés. </p>
+                
+                <p><u><strong>Global Scope:</strong></u> Las variables NO están dentro de funciones o bloques, por lo tanto se puede acceder a ellas de manera global.</p>
+
+                <div class="code-background">
+                    <code>
+    
+                    &nbsp var hello = "HELLO :)"; <br>
+                    &nbsp var hello = "HELLO +:("; <br>
+                    &nbsp let world = "Hello World"; <br>
+                    &nbsp const helloWorld = "Hello World!!"; <br>
+
+                    &nbsp const anotherFunction = () => {<br>
+                        &nbsp &nbsp console.log(hello);<br>
+                        &nbsp &nbsp console.log(world);<br>
+                        &nbsp &nbsp console.log(helloWorld);<br>
+                        &nbsp } <br>
+
+                        &nbsp anotherFunction (); //Llamado de la función 
+                    </code>
+                </div>
+
+                <p><strong><u> NOTA: </u></strong></p>
+                <ul>
+                    <li><p>Al correr el codigo, puede observarse que al definir 2 variables con el mismo nombre: se reescribe la segunda variable sobre la primera.</p></li>
+                    <li><p>Por otra parte, <code>let</code> ni <code>const</code> no permite reeasignar un nuevo valor con el nombre asignado anteriormente.</p></li>
+                    <li> <p>No es para nada buena practica definir variables de uso 
+                    global dentro de bloques de codigo o dentro de funciones. Se hablará de esto en la sección de <a href="#index-hoisting">Hoisting</a></p></li>
+                    <li><p>En el uso de variables la unica manera de reasignar variables es mediante el uso de var puesto que  let y const no lo permitirá.</p></li>
+                </ul>
+
+                <p><u><strong>Local Scope:</strong></u></p>
+                <p>Las variables SI estan dentro de bloques de codigo o funciones, por lo cual se puede acceder a ellas SOLO en el bloque de codigo o la funcion.</p>
+                <p>Pues fuera de la función o el bloque de codigo, esta variable no existirá.</p>
+
+                <p><strong>Ejemplo 1</strong></p>
+                <div class="code-background">
+                    <code>
+                        &nbsp const helloWorld = () => { <br>
+                            &nbsp &nbsp const hello = 'hello World'; <br>
+                            &nbsp &nbsp console.log(hello); <br>
+                        &nbsp } <br>
+                        &nbsp helloWorld(); <br>
+                        &nbsp console.log(hello); 
+                    </code>
+                </div>
+                <p><strong><u>NOTA:</u></strong> Al correr el codigo se observa que <code>console.log(hello);</code> No podra acceder a la const hello porque esta definida de manera local mas no de manera global.</p>
+
+                <p><u><strong>Ejemplo 2</strong></u></p>
+                <div class="code-background">
+                    <code>
+                        &nbsp var scope = "I'm just global" <br>
+                        &nbsp const functionScope = () => { <br>
+                            &nbsp &nbsp var scope = " I'm just local" <br>
+                            &nbsp &nbsp const func = () => { <br>
+                                &nbsp &nbsp &nbsp return scope; <br>
+                            &nbsp &nbsp } <br>
+                            &nbsp &nbsp console.log(func()); <br>
+                        &nbsp } <br>
+                        &nbsp functionScope (); //Retorna el scope local <br>
+                        &nbsp console.log (scope); // Retorna el scope global
+                    </code>
+                </div>
+                <p><strong><u>NOTA:</u></strong> Observese que al correr el codigo anterior al utilizar la función <code>functionScope ();</code> se logra acceder al scope local <code>scope = " I'm just local"</code> y al utilizar <code>console.log (scope);</code> solo se puede acceder a <code>scope = "I'm just global" </code>. </p>
+
+FUNCTION LOCAL SCOPE
+    var scope = "I'm just global"
+    const functionScope = () => {
+        var scope = " I'm just local"
+        const func = () => {
+            return scope
+        }
+        console.log(func());
+    }
+    functionScope ();
+    console.log (scope);
+
+
+    const fruits = () => {
+        var fruit = "apple";
+        console.log(fruit);
+    }
+    fruits ();
+
+    const numbrerFunction = () => {
+        var x = 1; //este valor se borrará pues sera reescrito por el siguiente valor de X
+        var x = 2;
+        var y = 1;//este valor se borrará pues sera reescrito por el siguiente valor de y
+        var y = 2;
+        console.log (x)
+        console.log (y)
+    }
+    numbrerFunction ();
+
+BLOCK LOCAL SCOPE
+
+EJEMPLO 1
+    const colors = () => {
+    if (true) {
+        var color1 = "Blue";
+        let color2 = "Yellow";
+        const color3 = "Green";
+        console.log(color2);//Debe estar dentro del Scope del bloque para ser llamados, de lo contrario no se podría
+        console.log(color3);//Debe estar dentro del Scope del bloque para ser llamados, de lo contrario no se podría
+    }
+    console.log(color1); // Sí podra acceder porque var permite acceder dentro de la funcion local definida. Sigue siendo el scope local.
+    }
+
+    colors();
+
+EJEMPLO 2
+    Caso let
+    let x = 1;
+        {
+            let x = 2 
+            console.log (x) //Al estar dentro del bloque retornará 2
+        }
+        console.log(x); // Al estar fuera del bloque retornará 1
+
+    Caso var
+        var y = 1;
+        {
+            var y = 2 
+            console.log (y) //Retornará 2
+        }
+        console.log(y); //Reescribe el valor del bloque definido anteriormente.
+
+EJEMPLO 3   
+
+    const anotherFunction = () => {
+        for (let i = 0; i < 10; i++) {
+            setTimeout(() => {
+            console.log(i);
+            }, 1000);
+        };
+    };
+
+anotherFunction(); //Al poner let en lugar de var hace que por cada iteración muestre el valor del bloque ejecutado. Si se pusiera var reescribiría todas los resultados por el ultimo valor de var.
+
+
+NOTA: Al poner let en lugar de var hace que por cada iteración muestre el valor del bloque ejecutado.
+Si se pusiera var reescribiría todas los resultados por el ultimo valor de var.
+
+El setTimeoy creo que lo utiliza para darle un tiempo determinado para que temine de hacer todo el bucle for y después imprima el console.log con el ultimo valor de var.
+
+Al utilizar let se obtiene el valor con el retraso pero sin reescribirse.
+
+
+            <h3 id="index-closures">Closures</h3>
+Según la definición estricta una clausura o closure es una función que guarda referencias del estado adyacente (ámbito léxico). 
+
+En otras palabras, una clausura permite acceder al ámbito de una función exterior desde una función interior. En JavaScript, las clausuras se crean cada vez que una función es creada.
+
+//Ejemplo 
+
+    const moneyBox = () => {
+        var saveCoins = 0;
+        const countCoins = (coins) => {
+            saveCoins += coins;
+            console.log(`MoneyBox: $${saveCoins}`);
+        } 
+        return countCoins;
+    };
+    let myMoneyBox = moneyBox();
+    myMoneyBox(4); 
+    myMoneyBox(6);
+    myMoneyBox(10);
+
+
+Lexical
+
+    const buildCount = (i) => {
+        let count = i;
+        const displayCount = () => {
+            console.log(count++);
+        };
+        return displayCount;
+    };
+
+    const myCount = buildCount(3);
+    myCount();
+    myCount();
+    myCount();
+
+    const myOtherCount = buildCount(10);
+    myOtherCount();
+    myOtherCount();
+    myOtherCount();
+
+NOTA: Cabe resaltar que la sintaxis x++ realiza un incremento pero muestra el valor anterior al incremento, y la sintaxis ++x realiza el incremento pero muestra el valor ya incrementado.
+
+
+Private
+
+    const person = () => {
+        var saveName = "Name";
+        return {
+            getName: () => {
+                return saveName;
+            },
+            setName: (name) => {
+                saveName = name;
+            },
+        };
+    };
+
+    newPerson = person();
+    console.log(newPerson.getName());
+
+    newPerson.setName('nombreCualquiera');
+    console.log(newPerson.getName());
+
+
+Loops
+    const anotherFunction = () => {
+        for (let i = 0; i < 10; i++){
+            setTimeout(() => {
+                console.log(i);
+            }, 1000)
+        }
+    };
+    anotherFunction();
+
+NOTA: El closure en este caso viene a ser el setTimeout() y como Oscar mostró si usas var, en el setTimeout() por consola se mostrará 10 veces 10 ya que el setTimeout es asíncrono y va ejecutarse luego de haber recorrido todo el for. Y tendrá el valor de 10 ya que var tiene un scope de función debido al hoisting (levantamiento)
+
+
+
+            <h3 id="index-hoisting">Hoisting</h3>
+
+El concepto de Hoisting fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución).
+Conceptualmente, por ejemplo, una estricta definición de hoisting sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, pero esto no es lo que ocurre en realidad. 
+
+Lo que sucede es que las declaraciones de variables var y funciones son asignadas en memoria durante la fase de compilación, pero quedan exactamente en dónde las has escrito en el código.
+
+EJEMPLO 1
+
+    Escritura de Codigo
+    a = 2;
+    var a; 
+    console.log(a)
+
+    Como lo interpreta JavaScript
+     var a;     //Declaración de la variable con valor undefined por defecto.
+     a = 2;     //Inicialización de la variable asignandole un valor
+     console.log(a); // Ejecución de llamado a la consola el valor a = 2,
+
+EJEMPLO 2
+
+    Escritura de Codigo
+    console.log(b);
+    var b = 2;
+    console.log(b)
+
+    Interpretación de JavaScript
+    var b;      // Declaración de la variable con valor undefined por defecto.
+    console.log(b) //Ejecución del llamado a la consola el valor de b = undefined.
+    b = 3;      //Asignación del valor b = 3
+    console.log(b) //Ejecución del llamado a la consola el valor de b = 3
+
+EJEMPLO 3
+
+    Escritura de Codigo
+    nameOfDog('Elmo');
+    function nameOfDog(name) {
+        console.log(name);
+    }
+
+    Interpretaciónde JavaScript
+    function nameOfDog(name) { 
+        console.log(name);
+    }       // Guardado de la funcion en el scope actual
+    nameOfDog('Elmo'); //Asignación de un argumento a una función disponible en el scope
+            </section>
+        </section>
+    </main>
+    <footer class="index-footer">
+        <ul class="index-footer-contact">
+            <li><a href="https://www.linkedin.com/in/danielvaldivv/"><span><img src="/danielvaldivv/assets/icons/icons/linkedin.svg" alt="Logo LinkedIn"></span></a></li>
+            <li><a href="https://github.com/danielvaldivv"><span><img src="/danielvaldivv/assets/icons/icons/github.svg" alt="Logo GitHub"></span></a></li>
+            <li><a href="https://platzi.com/p/danielvaldivv/"><span><img src="/danielvaldivv/assets/icons/icons/platzi.svg" alt="Logo Platzi"></span></a></li>
+            <li><a href="https://twitter.com/danielvaldivv/"><span><img src="/danielvaldivv/assets/icons/icons/twitter.svg" alt="Logo Twitter"></span></a></li>
+        </ul> 
+    </footer>
+</body>
+</html>
+
