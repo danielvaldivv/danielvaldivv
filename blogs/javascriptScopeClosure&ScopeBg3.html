@@ -115,213 +115,269 @@
                 </div>
                 <p><strong><u>NOTA:</u></strong> Observese que al correr el codigo anterior al utilizar la función <code>functionScope ();</code> se logra acceder al scope local <code>scope = " I'm just local"</code> y al utilizar <code>console.log (scope);</code> solo se puede acceder a <code>scope = "I'm just global" </code>. </p>
 
-FUNCTION LOCAL SCOPE
-    var scope = "I'm just global"
-    const functionScope = () => {
-        var scope = " I'm just local"
-        const func = () => {
-            return scope
-        }
-        console.log(func());
-    }
-    functionScope ();
-    console.log (scope);
+                <p><u><strong>FUNCTION LOCAL SCOPE</strong></u></p>
+                <p><strong>Ejemplo 1</strong></p>
+                <div class="code-background">
+                    <code>
+                        &nbsp var scope = "I'm just global" <br>
+                        &nbsp const functionScope = () => { <br>
+                            &nbsp &nbsp var scope = " I'm just local" <br>
+                            &nbsp &nbsp const func = () => { <br>
+                                &nbsp &nbsp &nbsp return scope <br>
+                            &nbsp } <br>
+                            &nbsp &nbsp console.log(func()); <br>
+                        &nbsp } <br>
+                        &nbsp functionScope (); <br>
+                        &nbsp console.log (scope); <br>
+                    </code>
+                </div>
 
+                <p><strong>Ejemplo 2</strong></p>
+                <div class="code-background">
+                    <code>
+                        &nbsp const fruits = () => { <br>
+                        &nbsp var fruit = "apple"; <br>
+                            &nbsp &nbsp console.log(fruit); <br>
+                        &nbsp } <br>
+                        &nbsp fruits (); <br>
+                    </code>
+                </div>
 
-    const fruits = () => {
-        var fruit = "apple";
-        console.log(fruit);
-    }
-    fruits ();
+                <p><strong>Ejemplo 3</strong></p>
+                <div class="code-background">
+                    <code>
+                        &nbsp const numberFunction = () => { <br>
+                            &nbsp &nbsp var x = 1; <br>
+                            &nbsp &nbsp var x = 2; <br>
+                            &nbsp &nbsp var y = 1;<br>
+                            &nbsp &nbsp var y = 2; <br>
+                            &nbsp &nbsp console.log (x) <br>
+                            &nbsp &nbsp console.log (y) <br>
+                        &nbsp } <br>
+                        &nbsp numberFunction (); 
+                    </code>
+                </div>
+                <p><strong><u>NOTA:</u></strong> el primer valor asignado <code>x = 1</code> sera borrado y se reescribirá <code>x = 2</code> al igual que <code>y</code> por lo que al final se obtendran <code>x = 2</code> y también <code>y = 2</code>.</p>
 
-    const numbrerFunction = () => {
-        var x = 1; //este valor se borrará pues sera reescrito por el siguiente valor de X
-        var x = 2;
-        var y = 1;//este valor se borrará pues sera reescrito por el siguiente valor de y
-        var y = 2;
-        console.log (x)
-        console.log (y)
-    }
-    numbrerFunction ();
+                <p><strong><u>BLOCK LOCAL SCOPE</u></strong></p>
+                <p><strong>Ejemplo 1</strong></p>
 
-BLOCK LOCAL SCOPE
+                <div class="code-background">
+                    <code>
+                        &nbsp const colors = () => { <br>
+                            &nbsp &nbsp if (true) { <br>
+                                &nbsp &nbsp &nbsp var color1 = "Blue"; <br>
+                                &nbsp &nbsp &nbsp let color2 = "Yellow"; <br>
+                                &nbsp &nbsp &nbsp const color3 = "Green"; <br>
+                                &nbsp &nbsp &nbsp console.log(color2); <br>
+                                &nbsp &nbsp &nbsp console.log(color3); <br>
+                            &nbsp &nbsp } <br>
+                            &nbsp &nbsp console.log(color1); <br>
+                        &nbsp } <br>
+                        &nbsp colors(); <br>
+                    </code>
+                </div>
+                <p><strong><u>NOTA:</u></strong> </p>
+                    <ul>
+                        <li><p>Es importante resaltar que <code>console.log(color2)</code> y <code>console.log(color3)</code>  deben estar dentro del <strong>SCOPE DEL BLOQUE</strong> para ser llamados, de lo contratio lograra acceder a ellos.</p></li>
+                        <li><p>Cabe mencionar tambien que <code>console.log(color1);</code> sí podra acceder porque var permite acceder dentro de la funcion local definida. Aunque no sea tan buena practica.</p></li>
+                    </ul>
+                
+                <p><strong>Ejemplo 2</strong></p>
+                <p><strong>CASO let</strong></p>
+                <div class="code-background">
+                    <code>
+                        &nbsp let x = 1; <br>
+                        &nbsp { <br>
+                            &nbsp &nbsp let x = 2 <br>
+                            &nbsp &nbsp console.log (x) // Retornará 2 <br>
+                        &nbsp } <br>
+                        &nbsp console.log(x); // Retornará 1 
+                    </code>
+                </div>
 
-EJEMPLO 1
-    const colors = () => {
-    if (true) {
-        var color1 = "Blue";
-        let color2 = "Yellow";
-        const color3 = "Green";
-        console.log(color2);//Debe estar dentro del Scope del bloque para ser llamados, de lo contrario no se podría
-        console.log(color3);//Debe estar dentro del Scope del bloque para ser llamados, de lo contrario no se podría
-    }
-    console.log(color1); // Sí podra acceder porque var permite acceder dentro de la funcion local definida. Sigue siendo el scope local.
-    }
+                <p><strong>CASO var</strong></p>
+                <div class="code-background">
+                    <code>
+                        &nbsp var y = 1; <br>
+                        &nbsp { <br>
+                            &nbsp &nbsp var y = 2 <br>
+                            &nbsp &nbsp console.log (x) // Retornará 2 <br>
+                        &nbsp } <br>
+                        &nbsp console.log(x); // Retornará 2 
+                    </code>
+                </div>
 
-    colors();
-
-EJEMPLO 2
-    Caso let
-    let x = 1;
-        {
-            let x = 2 
-            console.log (x) //Al estar dentro del bloque retornará 2
-        }
-        console.log(x); // Al estar fuera del bloque retornará 1
-
-    Caso var
-        var y = 1;
-        {
-            var y = 2 
-            console.log (y) //Retornará 2
-        }
-        console.log(y); //Reescribe el valor del bloque definido anteriormente.
-
-EJEMPLO 3   
-
-    const anotherFunction = () => {
-        for (let i = 0; i < 10; i++) {
-            setTimeout(() => {
-            console.log(i);
-            }, 1000);
-        };
-    };
-
-anotherFunction(); //Al poner let en lugar de var hace que por cada iteración muestre el valor del bloque ejecutado. Si se pusiera var reescribiría todas los resultados por el ultimo valor de var.
-
-
-NOTA: Al poner let en lugar de var hace que por cada iteración muestre el valor del bloque ejecutado.
-Si se pusiera var reescribiría todas los resultados por el ultimo valor de var.
-
-El setTimeoy creo que lo utiliza para darle un tiempo determinado para que temine de hacer todo el bucle for y después imprima el console.log con el ultimo valor de var.
-
-Al utilizar let se obtiene el valor con el retraso pero sin reescribirse.
-
-
+                <p><strong>Ejemplo 3</strong></p>  
+                <div class="code-background">
+                    <code>
+                        &nbsp const anotherFunction = () => { <br>
+                            &nbsp &nbsp for (let i = 0; i < 10; i++) { <br>
+                                &nbsp &nbsp &nbsp setTimeout(() => { <br>
+                                    &nbsp &nbsp &nbsp &nbsp console.log(i); <br>
+                                    &nbsp &nbsp &nbsp }, 1000); <br>
+                            &nbsp &nbsp }; <br>
+                        &nbsp }; <br>
+                        &nbsp anotherFunction();
+                    </code>
+                </div> 
+                <p><strong><u>NOTA:</u></strong> Al poner <code>let</code> en lugar de <code>var</code> hace que por cada iteración muestre el valor del bloque ejecutado.
+                Si se pusiera <code>var</code> reescribiría todas los resultados por el ultimo valor de <code>var</code>. 
+                </p>
+            
             <h3 id="index-closures">Closures</h3>
-Según la definición estricta una clausura o closure es una función que guarda referencias del estado adyacente (ámbito léxico). 
+            <p>Según la definición estricta una clausura o closure es una función que guarda referencias del estado adyacente (ámbito léxico).</p>
+            <p>En otras palabras, una clausura permite acceder al ámbito de una función exterior desde una función interior.</p>
+            <p>En JavaScript, las clausuras se crean cada vez que una función es creada.</p>
 
-En otras palabras, una clausura permite acceder al ámbito de una función exterior desde una función interior. En JavaScript, las clausuras se crean cada vez que una función es creada.
-
-//Ejemplo 
-
-    const moneyBox = () => {
-        var saveCoins = 0;
-        const countCoins = (coins) => {
-            saveCoins += coins;
-            console.log(`MoneyBox: $${saveCoins}`);
-        } 
-        return countCoins;
-    };
-    let myMoneyBox = moneyBox();
-    myMoneyBox(4); 
-    myMoneyBox(6);
-    myMoneyBox(10);
-
-
-Lexical
-
-    const buildCount = (i) => {
-        let count = i;
-        const displayCount = () => {
-            console.log(count++);
-        };
-        return displayCount;
-    };
-
-    const myCount = buildCount(3);
-    myCount();
-    myCount();
-    myCount();
-
-    const myOtherCount = buildCount(10);
-    myOtherCount();
-    myOtherCount();
-    myOtherCount();
-
-NOTA: Cabe resaltar que la sintaxis x++ realiza un incremento pero muestra el valor anterior al incremento, y la sintaxis ++x realiza el incremento pero muestra el valor ya incrementado.
+            <p><strong>Ejemplo</strong></p>
+            <div class="code-background">
+                <code>
+                    &nbsp const moneyBox = () => { <br>
+                        &nbsp &nbsp var saveCoins = 0; <br>
+                        &nbsp &nbsp const countCoins = (coins) => { <br>
+                            &nbsp &nbsp &nbsp saveCoins += coins; <br>
+                            &nbsp &nbsp &nbsp console.log(`MoneyBox: $$ {saveCoins}`); <br>
+                        &nbsp &nbsp } <br>
+                        &nbsp &nbsp return countCoins; <br>
+                    &nbsp }; <br>
+                    &nbsp let myMoneyBox = moneyBox(); <br>
+                    &nbsp myMoneyBox(4); <br>
+                    &nbsp myMoneyBox(6); <br>
+                    &nbsp myMoneyBox(10); <br>
+                </code>
+            </div>
 
 
-Private
+            <p><u><strong>Lexical</strong></u></p>
 
-    const person = () => {
-        var saveName = "Name";
-        return {
-            getName: () => {
-                return saveName;
-            },
-            setName: (name) => {
-                saveName = name;
-            },
-        };
-    };
+            <div class="code-background">
+                <code>
+                    &nbsp const buildCount = (i) => { <br>
+                        &nbsp &nbsp let count = i; <br>
+                        &nbsp &nbsp const displayCount = () => { <br>
+                            &nbsp &nbsp &nbsp console.log(count++); <br>
+                        &nbsp &nbsp }; <br>
+                        &nbsp &nbsp return displayCount; <br>
+                    &nbsp }; <br>
+                
+                    &nbsp const myCount = buildCount(3); <br>
+                    &nbsp myCount(); <br>
+                    &nbsp myCount(); <br>
+                    &nbsp myCount(); <br>
+                
+                    &nbsp const myOtherCount = buildCount(10); <br>
+                    &nbsp myOtherCount(); <br>
+                    &nbsp myOtherCount(); <br>
+                    &nbsp myOtherCount(); <br>
+                </code>
+            </div>
+            <p><u><strong>NOTA:</strong></u> Cabe resaltar que la sintaxis <code>x++</code> realiza un incremento pero muestra el valor anterior al incremento, y la sintaxis <code>++x</code> realiza el incremento pero muestra el valor ya incrementado.</p>
 
-    newPerson = person();
-    console.log(newPerson.getName());
+            <p><u><strong>Private</strong></u></p>
+            <div class="code-background">
+                <code>
+                    &nbsp const person = () => { <br>
+                        &nbsp &nbsp var saveName = "Name"; <br>
+                        &nbsp &nbsp return { <br>
+                            &nbsp &nbsp &nbsp getName: () => { <br>
+                                &nbsp &nbsp &nbsp &nbsp return saveName; <br>
+                            &nbsp &nbsp &nbsp }, <br>
+                            &nbsp &nbsp &nbsp setName: (name) => { <br>
+                                &nbsp &nbsp &nbsp &nbsp saveName = name; <br>
+                            &nbsp &nbsp &nbsp }, <br>
+                        &nbsp &nbsp }; <br>
+                        &nbsp }; <br>
+                
+                        &nbsp newPerson = person(); <br>
+                        &nbsp console.log(newPerson.getName()); <br>    
+                        &nbsp newPerson.setName('nombreCualquiera'); <br>
+                        &nbsp console.log(newPerson.getName()); 
+                </code>
+            </div>
 
-    newPerson.setName('nombreCualquiera');
-    console.log(newPerson.getName());
-
-
-Loops
-    const anotherFunction = () => {
-        for (let i = 0; i < 10; i++){
-            setTimeout(() => {
-                console.log(i);
-            }, 1000)
-        }
-    };
-    anotherFunction();
-
-NOTA: El closure en este caso viene a ser el setTimeout() y como Oscar mostró si usas var, en el setTimeout() por consola se mostrará 10 veces 10 ya que el setTimeout es asíncrono y va ejecutarse luego de haber recorrido todo el for. Y tendrá el valor de 10 ya que var tiene un scope de función debido al hoisting (levantamiento)
+            <p><u><strong>Loops</strong></u></p>
+            <div class="code-background">
+                <code>
+                    &nbsp const anotherFunction = () => { <br>
+                        &nbsp &nbsp for (let i = 0; i < 10; i++){ <br>
+                            &nbsp &nbsp &nbsp setTimeout(() => { <br>
+                                &nbsp &nbsp &nbsp &nbsp console.log(i); <br>
+                            &nbsp &nbsp &nbsp }, 1000) <br>
+                        &nbsp &nbsp } <br>
+                    &nbsp }; <br>
+                    &nbsp anotherFunction();
+                </code>
+            </div>
+            <p><strong><u>NOTA: </u></strong>El closure en este caso viene a ser el setTimeout() y como se mostró si se usa <code>var</code>, en el setTimeout() por consola se mostrará 10 veces 10 ya que el setTimeout es asíncrono y va ejecutarse luego de haber recorrido todo el for. Y tendrá el valor de 10 ya que var tiene un scope de función debido al hoisting (levantamiento).</p>
 
 
 
             <h3 id="index-hoisting">Hoisting</h3>
+            <p>El concepto de Hoisting fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución).</p>
+            <p>Conceptualmente, una estricta definición de hoisting sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, pero esto no es lo que ocurre en realidad. </p>
+            <p>Lo que sucede es que las declaraciones de variables var y funciones son asignadas en memoria durante la fase de compilación, pero quedan exactamente en dónde las has escrito en el código.</p>
 
-El concepto de Hoisting fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución).
-Conceptualmente, por ejemplo, una estricta definición de hoisting sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, pero esto no es lo que ocurre en realidad. 
+            <p><strong>Ejemplo 1</strong></p>
+            <p>Codigo ingresado</p>
+            <div class="code-background">
+                <code>
+                    &nbsp a = 2; <br>
+                    &nbsp var a;  <br>
+                    &nbsp console.log(a) <br>
+                </code>
+            </div>
 
-Lo que sucede es que las declaraciones de variables var y funciones son asignadas en memoria durante la fase de compilación, pero quedan exactamente en dónde las has escrito en el código.
+            <p>Interpretación de JavaScript</p>
+            <div class="code-background">
+                <code>
+                    &nbsp var a;     //Declaración de la variable con valor undefined por defecto. <br>
+                    &nbsp a = 2;     //Inicialización de la variable asignandole un valor <br>
+                    &nbsp console.log(a); // Ejecución de llamado a la consola el valor a = 2
+                </code>
+            </div>
 
-EJEMPLO 1
+            <p><strong>Ejemplo 2</strong></p>
+            <p>Codigo ingresado</p>
+            <div class="code-background">
+                <code>
+                    &nbsp console.log(b); <br>
+                    &nbsp var b = 3;  <br>
+                    &nbsp console.log(b) <br>
+                </code>
+            </div>
+            <p>Interpretación JavaScript</p>
+            <div class="code-background">
+                <code>
+                    &nbsp var b;      // Declaración de la variable con valor undefined por defecto. <br>
+                    &nbsp console.log(b) //Ejecución del llamado a la consola el valor de b = undefined. <br>
+                    &nbsp var b = 3;  //Asignación de valor 3 a variable b<br>
+                    &nbsp console.log(b) //Ejecución del llamado a la consola el valor de b = 3
+                </code>
+            </div>
+    
+    
 
-    Escritura de Codigo
-    a = 2;
-    var a; 
-    console.log(a)
-
-    Como lo interpreta JavaScript
-     var a;     //Declaración de la variable con valor undefined por defecto.
-     a = 2;     //Inicialización de la variable asignandole un valor
-     console.log(a); // Ejecución de llamado a la consola el valor a = 2,
-
-EJEMPLO 2
-
-    Escritura de Codigo
-    console.log(b);
-    var b = 2;
-    console.log(b)
-
-    Interpretación de JavaScript
-    var b;      // Declaración de la variable con valor undefined por defecto.
-    console.log(b) //Ejecución del llamado a la consola el valor de b = undefined.
-    b = 3;      //Asignación del valor b = 3
-    console.log(b) //Ejecución del llamado a la consola el valor de b = 3
-
-EJEMPLO 3
-
-    Escritura de Codigo
-    nameOfDog('Elmo');
-    function nameOfDog(name) {
-        console.log(name);
-    }
-
-    Interpretaciónde JavaScript
-    function nameOfDog(name) { 
-        console.log(name);
-    }       // Guardado de la funcion en el scope actual
-    nameOfDog('Elmo'); //Asignación de un argumento a una función disponible en el scope
+            <p><strong>Ejemplo 3</strong></p>
+            <p>Codigo ingresado</p>
+            <div class="code-background">
+                <code>
+                    &nbsp nameOfDog('Elmo'); <br>
+                    &nbsp function nameOfDog(name) {  <br>
+                        &nbsp &nbsp console.log(name); <br>
+                    &nbsp } 
+                </code>
+            </div>
+            <p>Interpretación JavaScript</p>
+            <div class="code-background">
+                <code>
+                    &nbsp function nameOfDog(name) { <br>
+                        &nbsp &nbsp console.log(name); <br>
+                    &nbsp }       // Guardado de la funcion en el scope actual <br>
+                    &nbsp nameOfDog('Elmo'); //Asignación de un argumento a una función disponible en el scope
+                </code>
+            </div>
+    
             </section>
         </section>
     </main>
