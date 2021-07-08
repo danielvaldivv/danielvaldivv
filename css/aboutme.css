@@ -1,0 +1,23 @@
+.main-aboutme {
+    max-width: 900px;
+    width: 95%;
+    margin: 15px auto;
+    display: grid;
+    justify-items: center;
+}
+.main-aboutme picture {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.main-aboutme picture img {
+    width: 300px;    
+    border-radius: 50%;
+    border: 1px solid var(--color6)
+}
+.main-aboutme-description {
+    max-width: 500px;
+    margin-block-start: 10px;
+    text-align: center;
+    line-height: 3.6rem;
+}
