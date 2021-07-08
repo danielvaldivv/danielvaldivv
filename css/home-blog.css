@@ -11,16 +11,13 @@
     margin: 0 auto;
     box-shadow: 1px 1px 8px 8px rgba(0, 0, 0,0.4);
 }
-.main-section-blog .section-blog-link {
-    background-color: var(--color6);
-    border: 1px solid var(--fondoHover);
-    border-radius: 3px;
-}
 .main-section-blog h3 {
+    background-color: var(--color6);
     color: var(--color2);
     padding: 10px;  
     text-align: center;
-    border: 1px solid var(--color5);
+    border: 1px solid var(--fondoHover);
+    border-radius: 3px;
 }
 .main-section-blog h3:hover {
     color: white;
