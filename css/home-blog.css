@@ -11,9 +11,6 @@
     margin: 0 auto;
     box-shadow: 1px 1px 8px 8px rgba(0, 0, 0,0.4);
 }
-::-webkit-scrollbar {
-    display: none; /*ELIMINA LOS SCROLLBAR VISIBLES PERO PERMITE LA FUNCIONALIDAD DEL SCROLL*/
-}
 .main-section-blog .section-blog-link {
     border-radius: 3px;
     background-image: url('../assets/img/blog.jpg');
