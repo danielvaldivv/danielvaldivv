@@ -1,23 +1,79 @@
-.main-aboutme {
-    max-width: 900px;
-    width: 95%;
-    margin: 15px auto;
-    display: grid;
-    justify-items: center;
+.parallax-wraper {
+    height: 78vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+    max-width: none;
 }
-.main-aboutme picture {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+.parallax-wraper .intro-screen {
+    width: 100vw;
+    height: 78vh;
+    background-color: var(--color6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}   
+.parallax-wraper .outroscreen {
+    width: 100vw;
+    height: 78vh;
+    background-color: var(--color6);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.main-aboutme picture img {
-    width: 300px;    
+.parallax-wraper .parallax-group {
+    position: relative;
+    height: 78vh;
+    transform-style: preserve-3d;
+}
+.parallax-wraper .parallax-group .parallax-layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.parallax-wraper .parallax-group .base-layer {
+    transform: translateZ(-300px) scale(2);
+    background-image: url('/danielvaldivv/assets/img/background-space.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+.parallax-wraper .parallax-group .mid-layer {
+    transform: translateZ(0);
+}
+.parallax-wraper .parallax-group .top-layer {
+    transform: translateZ(210px) scale(0.3);
+}
+.parallax-wraper #intro {
+    z-index: 0;
+}
+.parallax-wraper #group-one {
+    z-index: -1;
+}
+.parallax-wraper #group-one > .base-layer {
+    background-color: var(--sombraHover);
+}
+.parallax-wraper #group-two {
+
+}
+.parallax-wraper #group-two > .mid-layer {
+    background-color: var(--sombraBoton);
+}
+.parallax-wraper #outro {
+
+}
+.parallax-wraper .parallax-group img {
+    width: 300px;
     border-radius: 50%;
-    border: 1px solid var(--color6)
-}
-.main-aboutme-description {
-    max-width: 500px;
-    margin-block-start: 10px;
-    text-align: center;
-    line-height: 3.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
