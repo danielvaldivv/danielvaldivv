@@ -1,9 +1,9 @@
 ### Hi there 👋
 
-### I'm Daniel Valdivieso  :v: :flags: 
-#### You are at one of the entrance doors to my website. :crystal_ball: :globe_with_meridians:
-### You can learn about science, technology, gastronomy, art and more... :milky_way: :computer: :curry:
-#### See you :earth_americas:
+## I'm Daniel Valdivieso  :v: :flags: 
+### You are at one of the entrance doors to my website. :crystal_ball: :globe_with_meridians:
+## You can learn about science, technology, gastronomy, art and more... :milky_way: :computer: :curry:
+### See you :earth_americas:
 
 <!--
 **danielvaldivv/danielvaldivv** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
