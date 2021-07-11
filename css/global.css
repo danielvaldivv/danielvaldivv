@@ -12,6 +12,7 @@
     --sombraHover : rgba(102, 129, 131, 0.2);
     --fondoHover :  rgba(102, 129, 131, 0.5);
     --sombraBoton : rgba(18, 59, 34, 0.3);
+    --colorv2-1: rgb(211, 206, 187);
 }
 h1 {
     font-size: 5rem;
