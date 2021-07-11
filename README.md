@@ -1,8 +1,8 @@
 ### Hi there 👋
 
-## I'm Daniel Valdivieso  :v: :flags: 
+## I'm Daniel Valdivieso  :v: :rocket:
 ### You are at one of the entrance doors to my website. :crystal_ball: :globe_with_meridians:
-## You can learn about science, technology, gastronomy, art and more... :milky_way: :computer: :curry:
+## You can learn about science, technology, gastronomy, art and more... :milky_way: :computer: :curry: :art:
 ### See you :earth_americas:
 
 <!--
