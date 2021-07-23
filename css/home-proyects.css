@@ -34,8 +34,9 @@
     color: white;
 }
 .main-grid-proyects {
-    display: grid;
-    grid-template-rows: auto;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
     padding: 5px;
 }
 .main-grid-proyects .grid-proyects-mini {
