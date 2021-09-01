@@ -4,7 +4,11 @@
   "description": "## I'm Daniel Valdivieso  :v: :rocket: ### You are at one of the entrance doors to my website. :crystal_ball: :globe_with_meridians: ## You can learn about science, technology, gastronomy, art and more... :milky_way: :computer: :curry: :art: ### See you :earth_americas:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development",
+    "build": "webpack  --mode production",
+    "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
+    "lint": "eslint src/ --fix"
   },
   "repository": {
     "type": "git",
