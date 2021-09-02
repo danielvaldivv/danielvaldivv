@@ -15,7 +15,7 @@ import '../styles/Skills.css'
 function Skills() {
   return (
     <section className="skills">
-      <h2 className="skills__tittle">Skills</h2>
+      <h2 className="skills__tittle">Skills Tech</h2>
       <section className="Section__grid">
         <a target="_blank" rel="noreferrer" href="/"><figure><img src={html} alt="HTML icon"/><figcaption><p>HTML5</p></figcaption></figure></a>
         <a target="_blank" rel="noreferrer" href="/"><figure><img src={css} alt="CSS icon"/><figcaption><p>CSS3</p></figcaption></figure></a>
