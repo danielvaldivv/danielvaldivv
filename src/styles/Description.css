@@ -15,4 +15,5 @@ h3 a:hover {
 h4 {
   margin-block-end: 10px;
   width: 68%;
+  max-width: 800px;
 }
