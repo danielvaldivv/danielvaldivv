@@ -1,6 +1,7 @@
 import React from 'react'
 import Intro from '../components/Intro'
 import Description from '../components/Description'
+import Skills from '../components/Skills'
 
 import Avatar from '../assets/img/avatar.png'
 import '../styles/Parallax.css'
@@ -14,7 +15,7 @@ function Parallax() {
 
         <div className="parallax-group" id="group-one">
             <div className="parallax-layer base-layer">
-                <img src={Avatar} alt="Avatar danielvaldivv" width="30%"/>
+                <img className="avatar" src={Avatar} alt="Avatar danielvaldivv" width="30%"/>
             </div>
             <div className="parallax-layer mid-layer">
               <Description/>
@@ -23,12 +24,12 @@ function Parallax() {
 
         <div className="parallax-group" id="group-two">
             <div className="parallax-layer mid-layer">
-                <h2>Skills</h2>
+              <Skills/>
             </div>
         </div>
 
         <div className="outroscreen" id="outro">
-            <h2>Proyects</h2> 
+            <h2>Proyects</h2>
         </div>
       </main>
   )

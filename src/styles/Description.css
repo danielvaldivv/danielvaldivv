@@ -12,7 +12,7 @@ h3 a:hover {
   color: #98ca3f;
   background-color: #121f3d;
 }
-h4, h2, h3 {
+.Description {
   margin-block-end: 10px;
   width: 68%;
   max-width: 800px;

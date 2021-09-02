@@ -26,7 +26,7 @@
 }
 .parallax-wraper .parallax-group {
   position: relative;
-  height: 65vh;
+  height: 100vh;
   transform-style: preserve-3d;
 }
 .parallax-wraper .parallax-group .parallax-layer {
@@ -64,7 +64,7 @@
 .parallax-wraper #group-two > .mid-layer {
   background-color: transparent;
 }
-.parallax-wraper .parallax-group img {
+.parallax-wraper .parallax-group .avatar {
   border-radius: 50%;
   margin-inline-start: 65%;
 }
