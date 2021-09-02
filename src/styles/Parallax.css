@@ -26,7 +26,7 @@
 }
 .parallax-wraper .parallax-group {
   position: relative;
-  height: 50vh;
+  height: 65vh;
   transform-style: preserve-3d;
 }
 .parallax-wraper .parallax-group .parallax-layer {
