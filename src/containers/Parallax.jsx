@@ -8,7 +8,7 @@ import '../styles/Parallax.css'
 function Parallax() {
   return (
     <main className="parallax-wraper">
-        <div className="parallax-group intro-screen" id="intro">
+        <div className=" intro-screen" id="intro">
             <Intro/>
         </div>
 
@@ -25,15 +25,10 @@ function Parallax() {
             <div className="parallax-layer mid-layer">
                 <h2>Skills</h2>
             </div>
-            {/* <div className="parallax-layer top-layer">
-                <h4 className="aboutme-description">
-                    At the end of 2020 I participated in the creation of a company that today seeks to improve peoples lifestyle through healthy and conscious eating. This project is financed with gastronomic products developed and produced by the company itself.
-                </h4>
-            </div> */}
         </div>
 
-        <div className="parallax-group outroscreen" id="outro">
-            <h2>Thanks for comming</h2>
+        <div className="outroscreen" id="outro">
+            <h2>Proyects</h2> 
         </div>
       </main>
   )
