@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 :root{
   --font1 : 'Cutive Mono', monospace;
-  --color1: #121f3d;
+  --color1: #061a49ef;
 }
 * {
   box-sizing: border-box;
