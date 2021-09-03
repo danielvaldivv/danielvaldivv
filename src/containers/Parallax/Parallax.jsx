@@ -1,21 +1,23 @@
 import React from 'react'
-import Intro from '../components/Intro'
-import Description from '../components/Description'
-import Skills from '../components/Skills'
+import Intro from '../../components/Intro/Intro'
+import Description from '../../components/Description/Description'
+import Skills from '../../components/Skills/Skills'
+import Avatar from '../../components/Avatar/Avatar'
+import Footer from '../../components/Footer/Footer'
 
-import Avatar from '../assets/img/avatar.png'
-import '../styles/Parallax.css'
+import './Parallax.css'
 
 function Parallax() {
   return (
-    <main className="parallax-wraper">
+    <>
+      <section className="parallax-wraper">
         <div className=" intro-screen" id="intro">
             <Intro/>
         </div>
 
         <div className="parallax-group" id="group-one">
             <div className="parallax-layer base-layer">
-                <img className="avatar" src={Avatar} alt="Avatar danielvaldivv" width="30%"/>
+                <Avatar/>
             </div>
             <div className="parallax-layer mid-layer">
               <Description/>
@@ -31,7 +33,9 @@ function Parallax() {
         <div className="outroscreen" id="outro">
             <h2>Proyects</h2>
         </div>
-      </main>
+        <Footer/>
+      </section>
+    </>
   )
 }
 

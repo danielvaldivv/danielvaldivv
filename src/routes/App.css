@@ -18,6 +18,10 @@ html {
 body {
   background-color: rgb(201, 201, 201);
 }
+#app {
+  height: 100vh;
+
+}
 h1{
   font-size: 4rem;
 }

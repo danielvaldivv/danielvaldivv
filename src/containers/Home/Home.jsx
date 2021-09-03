@@ -1,12 +1,10 @@
 import React from 'react'
-import Parallax from './Parallax'
-import Footer from '../components/Footer'
+import Parallax from '../Parallax/Parallax'
 
 function Home() {
   return (
     <>
       <Parallax/>
-      <Footer />
     </>
   )
 }

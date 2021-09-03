@@ -1,16 +1,16 @@
 import React from 'react'
-import html from '../assets/icons/skills/html.png'
-import css from '../assets/icons/skills/css.png'
-import js from '../assets/icons/skills/javascript.png'
-import react from '../assets/icons/skills/react.png'
-import node from '../assets/icons/skills/node.png'
-import webpack from '../assets/icons/skills/webpack.png'
-import eslint from '../assets/icons/skills/eslint.png'
-import prettier from '../assets/icons/skills/prettier.png'
-import git from '../assets/icons/skills/git.png'
-import github from '../assets/icons/skills/github.png'
+import html from '../../assets/icons/skills/html.png'
+import css from '../../assets/icons/skills/css.png'
+import js from '../../assets/icons/skills/javascript.png'
+import react from '../../assets/icons/skills/react.png'
+import node from '../../assets/icons/skills/node.png'
+import webpack from '../../assets/icons/skills/webpack.png'
+import eslint from '../../assets/icons/skills/eslint.png'
+import prettier from '../../assets/icons/skills/prettier.png'
+import git from '../../assets/icons/skills/git.png'
+import github from '../../assets/icons/skills/github.png'
 
-import '../styles/Skills.css'
+import './Skills.css'
 
 function Skills() {
   return (
