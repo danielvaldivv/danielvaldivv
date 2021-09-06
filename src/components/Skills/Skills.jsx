@@ -9,13 +9,16 @@ import eslint from '../../assets/icons/skills/eslint.png'
 import prettier from '../../assets/icons/skills/prettier.png'
 import git from '../../assets/icons/skills/git.png'
 import github from '../../assets/icons/skills/github.png'
+import stylus from '../../assets/icons/skills/stylus.png'
+import sass from '../../assets/icons/skills/sass.png'
+import less from '../../assets/icons/skills/less.png'
 
 import './Skills.css'
 
 function Skills() {
   return (
     <section className="skills">
-      <h2 className="skills__tittle">Skills Tech</h2>
+      <h2 className="skills__tittle">Tech Skills</h2>
       <section className="Section__grid">
         <a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/es/docs/Web/HTML/Element/html"><figure><img src={html} alt="HTML icon"/><figcaption><p>HTML5</p></figcaption></figure></a>
         <a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/es/docs/Web/CSS"><figure><img src={css} alt="CSS icon"/><figcaption><p>CSS3</p></figcaption></figure></a>
@@ -27,6 +30,9 @@ function Skills() {
         <a target="_blank" rel="noreferrer" href="https://prettier.io/"><figure><img src={prettier} alt="Prettier icon"/><figcaption><p>Prettier</p></figcaption></figure></a>
         <a target="_blank" rel="noreferrer" href="https://git-scm.com/"><figure><img src={git} alt="Git icon"/><figcaption><p>Git</p></figcaption></figure></a>
         <a target="_blank" rel="noreferrer" href="https://github.com/"><figure><img src={github} alt="GitHub icon"/><figcaption><p>GitHub</p></figcaption></figure></a>
+        <a target="_blank" rel="noreferrer" href="https://stylus-lang.com/"><figure><img src={stylus} alt="Stylus icon"/><figcaption><p>Stylus</p></figcaption></figure></a>
+        <a target="_blank" rel="noreferrer" href="https://sass-lang.com/"><figure><img src={sass} alt="Sass icon"/><figcaption><p>Sass</p></figcaption></figure></a>
+        <a target="_blank" rel="noreferrer" href="https://lesscss.org/"><figure><img src={less} alt="Less icon"/><figcaption><p>Less</p></figcaption></figure></a>
       </section>
     </section>
   )
