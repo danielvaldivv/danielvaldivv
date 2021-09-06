@@ -23,10 +23,10 @@
   width: 60px;
   height: 60px;
   padding: 5px;
+  transition: all 350ms ease-out ;
 }
 .Section__grid a img:hover{
   transform: scale(1.25);
-  transition: 250ms;
 }
 .Section__grid figure {
   display: flex;
@@ -44,14 +44,12 @@ figcaption {
   top: 63px;
   margin:0 auto;
   display:none;
-  transition: 250ms;
-  /* transition: all 2s; */
+  transition: all 350ms ease-out ;
 }
 
 figure:hover > figcaption {
   display:block;
-  transition: 500ms;
-  /* transition: all 2s; */
+
 }
 
 @media (min-width:500px) {
