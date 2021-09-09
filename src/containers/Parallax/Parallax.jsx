@@ -32,7 +32,6 @@ function Parallax() {
         </div>
 
         <div className="outroscreen" id="outro">
-          <h1>Projects</h1>
           <Projects/>
         </div>
         <Footer/>

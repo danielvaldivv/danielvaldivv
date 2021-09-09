@@ -26,6 +26,7 @@ const Projects = () => {
   return (
     <>
       <section className="Projects">
+        <h1>Projects</h1>
         <section className="Project">
           <div className="Project-description">
             <h2>{data.title}</h2>
