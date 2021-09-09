@@ -35,14 +35,14 @@
         position: relative
 
         .Project-picture
-          height:  200px
+          height:  160px
           border-radius: 15px
           background-color: rgba(170, 150, 150, 0.5)
           cursor: pointer
 
         figcaption
           position: absolute;
-          top: 205px;
+          top: 165px;
           left: 15px
           margin:0 auto
           display:none
@@ -54,8 +54,6 @@
 
 
     .Project-description
-      // grid-column: 2/3
-      // grid-row: 1/2
       margin 10px 0px 10px 25px
       display: flex
       flex-direction: column
@@ -68,9 +66,18 @@
       h4
         line-height: 2.3rem
 
+@media (min-width:400px)
+  .Projects
+    .Project
+      .Project-pictures
+        figure
+          .Project-picture
+            height:  180px
+          figcaption
+            top: 185px
+
 @media (min-width:500px)
   .Projects
-
     .Project
       .Project-pictures
         figure
