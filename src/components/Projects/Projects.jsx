@@ -31,7 +31,7 @@ const Projects = () => {
           <div className="Project-description">
             <h2>{data.title}</h2>
             <h4>Technologies: {data.technologies}</h4>
-            <h4>{data.description}</h4>
+            <h4>Description: {data.description}</h4>
           </div>
           <section className="Project-pictures">
             <button type="button" onClick={previousPicture}>
