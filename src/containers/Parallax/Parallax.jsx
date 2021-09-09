@@ -6,7 +6,7 @@ import Avatar from '../../components/Avatar/Avatar'
 import Footer from '../../components/Footer/Footer'
 import Projects from '../../components/Projects/Projects'
 
-import './Parallax.css'
+import './Parallax.styl'
 
 function Parallax() {
   return (

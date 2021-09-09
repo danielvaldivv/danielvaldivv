@@ -2,7 +2,7 @@ import React from 'react'
 
 import dataSkills from './dataSkills'
 
-import './Skills.css'
+import './Skills.styl'
 
 function Skills() {
   const data = dataSkills.skills;

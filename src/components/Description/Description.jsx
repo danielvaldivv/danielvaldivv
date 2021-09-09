@@ -1,5 +1,5 @@
 import React from 'react'
-import './Description.css'
+import './Description.styl'
 
 function Description() {
   return (

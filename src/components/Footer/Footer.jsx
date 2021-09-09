@@ -1,5 +1,7 @@
 import React from 'react'
-import './Footer.css'
+
+import './Footer.styl'
+
 import Linkedin from '../../assets/icons/linkedin.svg'
 import GitHub from '../../assets/icons/github.svg'
 import Platzi from '../../assets/icons/platzi.svg'

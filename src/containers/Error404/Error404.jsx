@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Error404.css'
+import './Error404.styl'
 
 import arrowLeft from '../../assets/icons/arrow-left.png'
 

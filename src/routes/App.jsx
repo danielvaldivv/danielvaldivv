@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Error404 from '../containers/Error404/Error404';
 import Home from '../containers/Home/Home';
 
-import './App.css'
+import './App.styl'
 
 const App = () => (
   <BrowserRouter>
