@@ -4,6 +4,7 @@ import Description from '../../components/Description/Description'
 import Skills from '../../components/Skills/Skills'
 import Avatar from '../../components/Avatar/Avatar'
 import Footer from '../../components/Footer/Footer'
+import Projects from '../../components/Projects/Projects'
 
 import './Parallax.css'
 
@@ -31,7 +32,8 @@ function Parallax() {
         </div>
 
         <div className="outroscreen" id="outro">
-            <h2>Proyects</h2>
+          <h1>Projects</h1>
+          <Projects/>
         </div>
         <Footer/>
       </section>

@@ -20,7 +20,7 @@ export default {
     },
     {
       id:  "4",
-      title: "React.js",
+      title: "Reactjs",
       url: "https://reactjs.org/",
       icon: "https://i.ibb.co/thsY9rP/react.png"
     },

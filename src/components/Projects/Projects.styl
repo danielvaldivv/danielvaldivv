@@ -1,0 +1,71 @@
+.Projects
+  max-width: 1024px
+  margin: 0 auto
+
+  .Project
+    display: grid
+    grid-template-columns: 3fr 2fr
+
+    .Project-pictures
+      grid-column: 1/2
+      grid-row: 1/2
+      max-height: 300px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin 30px 15px
+
+      button
+        outline: none;
+        border-radius: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        border: none
+        background-color: transparent
+        box-shadow: 0px 0px 5px 3px rgba(90, 90, 90, 0.1)
+
+        .button-previous-next
+          text-align: center
+          height: 25px
+          width: 25px
+
+      button:hover
+        background-color: rgba(170, 150, 150, 0.5)
+      figure
+        position: relative
+
+        .Project-picture
+          height:  300px
+          border-radius: 15px
+          background-color: rgba(170, 150, 150, 0.5)
+          cursor: pointer
+
+        figcaption
+          position: absolute;
+          top: 305px;
+          left: 15px
+          margin:0 auto
+          display:none
+          transition: all 350ms ease-out
+
+
+      figure:hover > figcaption
+        display:block
+
+
+    .Project-description
+      grid-column: 2/3
+      grid-row: 1/2
+      margin 10px 0px 10px 25px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      gap: 20px
+
+      h2
+        color: var(--color1)
+
+      h4
+        line-height: 2.3rem
