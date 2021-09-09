@@ -4,12 +4,8 @@
 
   .Project
     display: grid
-    grid-template-columns: 3fr 2fr
 
     .Project-pictures
-      grid-column: 1/2
-      grid-row: 1/2
-      max-height: 300px
       display: flex
       justify-content: space-between
       align-items: center
@@ -37,14 +33,14 @@
         position: relative
 
         .Project-picture
-          height:  300px
+          height:  200px
           border-radius: 15px
           background-color: rgba(170, 150, 150, 0.5)
           cursor: pointer
 
         figcaption
           position: absolute;
-          top: 305px;
+          top: 205px;
           left: 15px
           margin:0 auto
           display:none
@@ -56,8 +52,8 @@
 
 
     .Project-description
-      grid-column: 2/3
-      grid-row: 1/2
+      // grid-column: 2/3
+      // grid-row: 1/2
       margin 10px 0px 10px 25px
       display: flex
       flex-direction: column
@@ -69,3 +65,58 @@
 
       h4
         line-height: 2.3rem
+
+@media (min-width:500px)
+  .Projects
+
+    .Project
+      .Project-pictures
+        figure
+          .Project-picture
+            height:  250px
+          figcaption
+            top: 255px
+
+@media (min-width:600px)
+  .Projects
+    .Project
+      .Project-pictures
+        figure
+          .Project-picture
+            height:  360px
+          figcaption
+            top: 365px
+
+@media (min-width:700px)
+  .Projects
+    .Project
+      .Project-pictures
+        figure
+          .Project-picture
+            height:  400px
+          figcaption
+            top: 405px
+
+
+@media (min-width:900px)
+  .Projects
+    .Project
+      display: grid
+      grid-template-columns: 3fr 2fr
+
+      .Project-pictures
+        grid-column: 1/2
+        grid-row: 1/2
+        max-height: 300px
+      figcaption
+            top: 305px
+        
+
+
+        figure
+          .Project-picture
+            height:  280px
+
+      .Project-description
+        grid-column: 2/3
+        grid-row: 1/2
