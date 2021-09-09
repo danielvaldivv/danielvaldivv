@@ -67,6 +67,12 @@ export default {
       icon: "https://i.ibb.co/r423DBg/prettier.png"
     },
     {
+      id: "15",
+      title: "Babeljs",
+      url: "https://babeljs.io/",
+      icon: "https://i.ibb.co/sQgHfph/babel.png"
+    },
+    {
       id:  "12",
       title: "Firebase",
       url: "https://firebase.google.com/",
@@ -83,6 +89,6 @@ export default {
       title: "GitHub",
       url: "https://github.com/",
       icon: "https://i.ibb.co/D5wbfKp/github.png"
-    }
+    },
   ]
 }
