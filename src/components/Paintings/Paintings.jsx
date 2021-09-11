@@ -27,7 +27,6 @@ function Paintings() {
         <section className="Painting">
           <div className="Painting-description">
             <h4>Title:{data.title}</h4>
-            <p>Technique: {data.technique}</p>
           </div>
           <section className="Painting-pictures">
             <button type="button" onClick={previousPicture}>
@@ -44,9 +43,10 @@ function Paintings() {
                 className="button-previous-next"
                 src={next}
                 alt="Previous"
-              />
+                />
             </button>
           </section>
+                <p>Technique: {data.technique}</p>
         </section>
       </section>
   )

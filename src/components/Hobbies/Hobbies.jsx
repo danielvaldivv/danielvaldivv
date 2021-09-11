@@ -43,16 +43,16 @@ const Hobbies = () =>{
     <section className="Hobbies">
       <h1 className="Hobbies-title">Hobbies</h1>
       <section className="Hobbies-container">
-        <h3 className="Painting-title">
-          Paints
+        <h4 className="Painting-title">
+          Paintings
           <button
             className="arrowButton"
             type="button"
             onClick={deployPaintings} >
             <img src={arrowDeployIcon} alt="Arrow"/>
           </button>
-        </h3>
-        <h3 className="Reading-title">
+        </h4>
+        <h4 className="Reading-title">
           Reading
           <button
           className="arrowButton"
@@ -61,8 +61,8 @@ const Hobbies = () =>{
           >
             <img src={arrowDeployIcon} alt="Arrow"/>
           </button>
-        </h3>
-        <h3 className="Cooking-title">
+        </h4>
+        <h4 className="Cooking-title">
           Cooking
           <button
           className="arrowButton"
@@ -71,8 +71,8 @@ const Hobbies = () =>{
         >
             <img src={arrowDeployIcon} alt="Arrow"/>
           </button>
-        </h3>
-        <h3 className="Sports-title">
+        </h4>
+        <h4 className="Sports-title">
           Sports
           <button
           className="arrowButton"
@@ -81,7 +81,7 @@ const Hobbies = () =>{
         >
             <img src={arrowDeployIcon} alt="Arrow"/>
           </button>
-        </h3>
+        </h4>
         <div className="Hobbies-table">
           {hobbyVisible}
         </div>

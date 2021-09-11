@@ -38,34 +38,60 @@
       grid-row: 1/2
       width: 80%
       display: flex
+      flex-direction: column
       justify-content: space-between
+      align-items: center;
 
     .Reading-title
       grid-column: 1/4
       grid-row: 2/3
       width: 80%
       display: flex
+      flex-direction: column
       justify-content: space-between
+      align-items: center;
 
     .Cooking-title
       grid-column: 1/4
       grid-row: 3/4
       width: 80%
       display: flex
+      flex-direction: column
+
       justify-content: space-between
+      align-items: center;
 
     .Sports-title
       grid-column: 1/4
       grid-row: 4/5
       width: 80%
       display: flex
+      flex-direction: column
       justify-content: space-between
+      align-items: center;
 
     .Hobbies-table
       grid-column: 4/11
       grid-row: 1/5
 
+      padding: 15px
       width: 90%
+      min-height: 270px
       height: 95%
       border-radius: 18px
       border: 1px solid #333
+
+@media (min-width:550px)
+  .Hobbies
+    .Hobbies-container
+      .Painting-title
+        flex-direction: row
+
+      .Reading-title
+        flex-direction: row
+
+      .Cooking-title
+        flex-direction: row
+
+      .Sports-title
+        flex-direction: row
