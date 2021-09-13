@@ -1,28 +1,25 @@
 import React, { useState } from 'react'
 
 import Paintings from '../Paintings/Paintings'
+import Reading from '../Reading/Reading'
 
 import arrowDeployIcon from '../../assets/icons/arrow-left.png'
-import iconNext from '../../assets/icons/next.png'
 
 import './Hobbies.styl'
 
 const Hobbies = () =>{
-  const [hobbyVisible, setHobbyVisible] = useState(null)
-
   // Render Elements
-  const paintings = () => (
-    <Paintings/>
-  )
-  const reading = () => (
-    <img src={arrowDeployIcon} alt="reading"/>
-  )
+  const paintings = () => (<Paintings/>)
+  const reading = () => (<Reading/>)
   const cooking = () => (
     <h1>cooking</h1>
   )
   const sports = () => (
     <h1>sports</h1>
   )
+
+  const [hobbyVisible, setHobbyVisible] = useState(paintings)
+
 
   // setState
   const deployPaintings = () => {
