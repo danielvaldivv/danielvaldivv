@@ -1,10 +1,14 @@
 .Reading-section
+  display: flex
+  align-content: center
+  align-items: center
+  justify-content: center
+
   .Reading-books
     display: flex
     justify-content: space-between
     align-items: center
     align-content: center
-    padding: 25px
 
     button
       outline: none;
@@ -27,7 +31,16 @@
         background-color: rgba(170, 150, 150, 0.5)
 
     figure
-      .Reading-book {
-        max-height: 280px
+      .Reading-book
+        max-height: 220px
         border-radius: 8px
-      }
+
+
+@media (min-width:600px)
+  .Reading-section
+    .Reading-books
+      figure
+        .Reading-book
+          margin 20px 0px
+          max-height: 260px
+        
