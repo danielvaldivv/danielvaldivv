@@ -12,10 +12,17 @@ const Hobbies = () =>{
   const paintings = () => (<Paintings/>)
   const reading = () => (<Reading/>)
   const cooking = () => (
-    <h1>cooking</h1>
+    <>
+      <h3>Self-taught cook, interested in improving my quality of life by taking care of the food I eat. </h3>
+      <h3>Eating healthy doesn't have to be boring.</h3>
+      <h3> I think about my health, I think about my future.</h3>
+    </>
   )
   const sports = () => (
-    <h1>sports</h1>
+    <>
+      <h3>Science has been proving for years that sport literally rejuvenates us. Dr. David Sinclair explains it very well.</h3>
+      <h3>The fountain of youth is closer than we think. We just have to take action and leave the excuses behind.</h3>
+    </>
   )
 
   const [hobbyVisible, setHobbyVisible] = useState(paintings)
