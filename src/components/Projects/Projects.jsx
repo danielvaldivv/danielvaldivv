@@ -1,65 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
+
+import Project from '../Project/Project';
 
 import dataProjects from './dataProjects'
 
-import previous from '../../assets/icons/previous.png'
-import next from '../../assets/icons/next.png'
-
-import './Projects.styl'
-
 const Projects = () => {
-  const data = dataProjects.projects[0]
-  const [numberPicture, setNumberPicture] = useState(0)
-
-  const previousPicture = () => (
-    numberPicture > 0
-      ? setNumberPicture( numberPicture -1 )
-      : setNumberPicture(5)
-    )
-
-  const nextPicture = () => (
-    numberPicture < 5
-      ? setNumberPicture( numberPicture +1 )
-      : setNumberPicture(0)
-    )
+  const data = dataProjects.projects
 
   return (
-    <>
-      <section className="Projects">
-        <h1>Projects</h1>
-        <section className="Project">
-          <div className="Project-description">
-            <h2>{data.title}</h2>
-            <h4>Technologies: {data.technologies}</h4>
-            <h4>Description: {data.description}</h4>
-          </div>
-          <section className="Project-pictures">
-            <button type="button" onClick={previousPicture}>
-              <img
-                className="button-previous-next"
-                src={previous} alt="Previous"
-                />
-            </button>
-            <figure>
-              <a target="_blank" rel="noreferrer" href={data.url}>
-                <img className="Project-picture" src={data.image[numberPicture]} alt={data.title} />
-              </a>
-              <figcaption>
-                <p>{data.url}</p>
-              </figcaption>
-            </figure>
-            <button type="button" onClick={nextPicture}>
-              <img
-                className="button-previous-next"
-                src={next}
-                alt="Previous"
-              />
-            </button>
-          </section>
-        </section>
-      </section>
-    </>
+    <section className="Projects">
+      <h1>Projects</h1>
+      {data.map(element => (
+        <Project
+          key={element.id}
+          project={element.id}
+        />
+      ))}
+    </section>
   )
 }
-
 export default Projects
