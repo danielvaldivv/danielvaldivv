@@ -9,7 +9,7 @@ function Intro() {
         <section className="index-description">
           <h3>Eternal apprentice by decision,</h3>
           <h3 className="index-description-right">curious as a child,</h3>
-          <h3>with determination as John Wick!</h3>
+          <h3>with John Wick's determination!</h3>
           <h4>Let´s start...</h4>
         </section>
       </section>
