@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer className="index-footer">
         <p>Copyright © by danielvaldivv</p>
-        <p> 2021</p>
+        <p> 2022</p>
         <p>Contact</p>
         <ul className="index-footer-contact">
             <li><a href="https://www.linkedin.com/in/danielvaldivv/"><span><img src={Linkedin} alt="Logo LinkedIn"/></span></a></li>

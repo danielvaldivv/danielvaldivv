@@ -1,5 +1,6 @@
 import React from 'react'
-import avatarImg from '../../assets/img/avatar.png'
+// import avatarImg from '../../assets/img/avatar.png'
+import avatarImg from '../../assets/img/avatar.jpeg'
 
 import './Avatar.styl'
 
